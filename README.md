@@ -1,0 +1,1 @@
+# applidia-privacypolicy
