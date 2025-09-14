@@ -38,6 +38,29 @@
     .section {
       margin-bottom: 20px;
     }
+    .lang-selector {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .lang-selector button {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-left: 5px;
+      border-radius: 4px;
+    }
+    .lang-selector button.active {
+      background-color: #2c3e50;
+      color: white;
+      border-color: #2c3e50;
+    }
+    .lang-content {
+      display: none;
+    }
+    .lang-content.active {
+      display: block;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -50,68 +73,245 @@
 </head>
 <body>
   <div class="container">
-    <h1>Conditions Générales d’Utilisation – Applidia</h1>
-    <p><em>Dernière mise à jour : 26.05.2025</em></p>
-
-    <div class="section">
-      <h2>1. Présentation de l’application</h2>
-      <p>Bienvenue dans l’application. Applidia est une application mobile développée par Appplidia Sàrl. L’application permet aux utilisateurs de suivre leur diabète, enregistrer des données de santé (glycémies, insulines, etc.).</p>
+    <div class="lang-selector">
+      <button id="btn-fr" class="active" onclick="switchLang('fr')">FR</button>
+      <button id="btn-en" onclick="switchLang('en')">EN</button>
+      <button id="btn-de" onclick="switchLang('de')">DE</button>
+      <button id="btn-it" onclick="switchLang('it')">IT</button>
     </div>
 
-    <div class="section">
-      <h2>2. Acceptation des CGU</h2>
-      <p>L’utilisation de l’application implique l’acceptation pleine et entière des présentes Conditions Générales d’Utilisation. Si l’utilisateur n’accepte tout ou partie des CGU, il doit s’abstenir d’utiliser l’application. Ces conditions peuvent être modifiées à tout moment. Il est de votre responsabilité de consulter régulièrement cette page pour prendre connaissances des modifications.</p>
+    <!-- Contenu Français -->
+    <div id="fr" class="lang-content active">
+      <h1>Conditions Générales d’Utilisation – Applidia</h1>
+      <p><em>Dernière mise à jour : 26.05.2025</em></p>
+      <div class="section">
+        <h2>1. Présentation de l’application</h2>
+        <p>Bienvenue dans l’application. Applidia est une application mobile développée par Appplidia Sàrl. L’application permet aux utilisateurs de suivre leur diabète, enregistrer des données de santé (glycémies, insulines, etc.).</p>
+      </div>
+      <div class="section">
+        <h2>2. Acceptation des CGU</h2>
+        <p>L’utilisation de l’application implique l’acceptation pleine et entière des présentes Conditions Générales d’Utilisation. Si l’utilisateur n’accepte tout ou partie des CGU, il doit s’abstenir d’utiliser l’application. Ces conditions peuvent être modifiées à tout moment. Il est de votre responsabilité de consulter régulièrement cette page pour prendre connaissances des modifications.</p>
+      </div>
+      <div class="section">
+        <h2>3. Utilisation de l’application</h2>
+        <p>L’application est réservée à un usage personnel et ne remplace en aucun cas un avis médical. En cas d’urgence médicale, il convient de consulter un médecin ou de contacter les services d’urgences. L’accès à Applidia est gratuit (hors frais de connexions), mais certaines fonctionnalités avancées peuvent être soumises à un abonnement payant. L’utilisateur doit être âgé d’au moins 16 ans ou disposer de l’autorisation d’un représentant légal.</p>
+      </div>
+      <div class="section">
+        <h2>4. Création d’un compte</h2>
+        <p>L’utilisateur doit créer un compte personnel et fournir des informations exactes. Il s’engage à maintenir la confidentialité de ses identifiants et est responsable de toute utilisation de son compte.</p>
+      </div>
+      <div class="section">
+        <h2>5. Données personnelles</h2>
+        <p>Applidia traite les données personnelles de santé conformément à la Loi fédérale Suisse sue la protection des données (LPD) et le cas échéant, au Règlement général sur la protection des données (RGPD). Les données sont stockées de manière sécurisée, chiffrée, et ne sont transmises à aucun tiers sans consentement explicite, sauf obligation légale.</p>
+        <p>Droit de l’utilisateur :</p>
+        <ul>
+          <li>Accès à ses données</li>
+          <li>Rectification et suppression</li>
+          <li>Retrait du consentement</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>6. Responsabilité</h2>
+        <p>Vous êtes responsable de l’utilisation de l’application et des informations que vous y saisissez. Applidia Sàrl ne saurait être tenu responsable des conséquences d’une mauvaise utilisation de l’application. Applidia Sàrl s’efforce de fournir un service fiable, mais ne garantit pas l’exactitude ou la disponibilité permanente des services. Applidia Sàrl ne pourra être tenu responsable des dommages directs ou indirects résultant de l’utilisation ou de l’impossibilité d’utiliser l’application.</p>
+      </div>
+      <div class="section">
+        <h2>7. Propriété intellectuelle</h2>
+        <p>Tous les contenus de l’application (textes, logos, interfaces, algorithmes, etc.) sont protégés par les lois sur la protection intellectuelle et sont la propriété exclusive de Applidia Sàrl ou de ses partenaires. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans autorisation préalable.</p>
+      </div>
+      <div class="section">
+        <h2>8. Modification des CGU</h2>
+        <p>Appllidia Sàrl se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés des modifications par notification dans l’application. La poursuite de l’utilisation de l’application après modification vaut acceptation des nouvelles CGU.</p>
+      </div>
+      <div class="section">
+        <h2>9. Droit applicable et juridiction compétente</h2>
+        <p>Les présentes conditions générales sont soumises au droit Suisse. Tout litige relatif à l’application ou aux présentes conditions sera soumis à la compétence exclusive des tribunaux de l’arrondissement de Lausanne, Suisse. La version française des CGU fait foi.</p>
+      </div>
+      <div class="section">
+        <h2>10. Contact</h2>
+        <p>Pour toute question concernant ces conditions, veuillez nous contacter à l’adresse suivante : info@applidia.app</p>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>3. Utilisation de l’application</h2>
-      <p>L’application est réservée à un usage personnel et ne remplace en aucun cas un avis médical. En cas d’urgence médicale, il convient de consulter un médecin ou de contacter les services d’urgences. L’accès à Applidia est gratuit (hors frais de connexions), mais certaines fonctionnalités avancées peuvent être soumises à un abonnement payant. L’utilisateur doit être âgé d’au moins 16 ans ou disposer de l’autorisation d’un représentant légal.</p>
+    <!-- Contenu Anglais -->
+    <div id="en" class="lang-content">
+      <h1>Terms of Service – Applidia</h1>
+      <p><em>Last updated: 26.05.2025</em></p>
+      <div class="section">
+        <h2>1. Application Overview</h2>
+        <p>Welcome to the application. Applidia is a mobile application developed by Appplidia Sàrl. The application allows users to track their diabetes, and record health data (blood glucose, insulin, etc.).</p>
+      </div>
+      <div class="section">
+        <h2>2. Acceptance of Terms</h2>
+        <p>Use of the application implies full and complete acceptance of these Terms of Service. If the user does not accept all or part of the Terms, they must refrain from using the application. These terms may be modified at any time. It is your responsibility to regularly consult this page to be aware of any changes.</p>
+      </div>
+      <div class="section">
+        <h2>3. Use of the Application</h2>
+        <p>The application is for personal use only and is not a substitute for medical advice. In case of a medical emergency, you should consult a doctor or contact emergency services. Access to Applidia is free (excluding connection costs), but some advanced features may be subject to a paid subscription. The user must be at least 16 years old or have the authorization of a legal guardian.</p>
+      </div>
+      <div class="section">
+        <h2>4. Account Creation</h2>
+        <p>The user must create a personal account and provide accurate information. The user agrees to maintain the confidentiality of their login credentials and is responsible for all use of their account.</p>
+      </div>
+      <div class="section">
+        <h2>5. Personal Data</h2>
+        <p>Applidia processes personal health data in accordance with the Swiss Federal Act on Data Protection (FADP) and, where applicable, the General Data Protection Regulation (GDPR). Data is stored securely, encrypted, and is not transmitted to any third party without explicit consent, except as required by law.</p>
+        <p>User rights:</p>
+        <ul>
+          <li>Access to their data</li>
+          <li>Rectification and deletion</li>
+          <li>Withdrawal of consent</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>6. Liability</h2>
+        <p>You are responsible for the use of the application and the information you enter. Applidia Sàrl cannot be held responsible for the consequences of improper use of the application. Applidia Sàrl strives to provide a reliable service but does not guarantee the accuracy or permanent availability of the services. Applidia Sàrl shall not be liable for any direct or indirect damages resulting from the use or inability to use the application.</p>
+      </div>
+      <div class="section">
+        <h2>7. Intellectual Property</h2>
+        <p>All content of the application (texts, logos, interfaces, algorithms, etc.) is protected by intellectual property laws and is the exclusive property of Applidia Sàrl or its partners. You may not reproduce, distribute, or create derivative works without prior authorization.</p>
+      </div>
+      <div class="section">
+        <h2>8. Modification of Terms</h2>
+        <p>Appllidia Sàrl reserves the right to modify these Terms at any time. Users will be informed of changes via a notification within the application. Continued use of the application after modification constitutes acceptance of the new Terms.</p>
+      </div>
+      <div class="section">
+        <h2>9. Applicable Law and Jurisdiction</h2>
+        <p>These general conditions are subject to Swiss law. Any dispute relating to the application or these conditions will be subject to the exclusive jurisdiction of the courts of the district of Lausanne, Switzerland. The French version of the Terms is authoritative.</p>
+      </div>
+      <div class="section">
+        <h2>10. Contact</h2>
+        <p>For any questions regarding these terms, please contact us at the following address: info@applidia.app</p>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>4. Création d’un compte</h2>
-      <p>L’utilisateur doit créer un compte personnel et fournir des informations exactes. Il s’engage à maintenir la confidentialité de ses identifiants et est responsable de toute utilisation de son compte.</p>
+    <!-- Contenu Allemand -->
+    <div id="de" class="lang-content">
+      <h1>Allgemeine Nutzungsbedingungen – Applidia</h1>
+      <p><em>Letzte Aktualisierung: 26.05.2025</em></p>
+      <div class="section">
+        <h2>1. Vorstellung der Anwendung</h2>
+        <p>Willkommen in der Anwendung. Applidia ist eine mobile Anwendung, die von Appplidia Sàrl entwickelt wurde. Die Anwendung ermöglicht es den Nutzern, ihren Diabetes zu überwachen und Gesundheitsdaten (Blutzucker, Insulin usw.) aufzuzeichnen.</p>
+      </div>
+      <div class="section">
+        <h2>2. Annahme der ANB</h2>
+        <p>Die Nutzung der Anwendung setzt die vollständige Annahme dieser Allgemeinen Nutzungsbedingungen voraus. Wenn der Nutzer die ANB ganz oder teilweise nicht akzeptiert, muss er von der Nutzung der Anwendung absehen. Diese Bedingungen können jederzeit geändert werden. Es liegt in Ihrer Verantwortung, diese Seite regelmäßig zu konsultieren, um sich über Änderungen zu informieren.</p>
+      </div>
+      <div class="section">
+        <h2>3. Nutzung der Anwendung</h2>
+        <p>Die Anwendung ist nur für den persönlichen Gebrauch bestimmt und ersetzt keinesfalls eine ärztliche Beratung. Im Falle eines medizinischen Notfalls sollten Sie einen Arzt konsultieren oder den Notdienst kontaktieren. Der Zugang zu Applidia ist kostenlos (ohne Verbindungskosten), aber einige erweiterte Funktionen können einem kostenpflichtigen Abonnement unterliegen. Der Nutzer muss mindestens 16 Jahre alt sein oder die Genehmigung eines Erziehungsberechtigten haben.</p>
+      </div>
+      <div class="section">
+        <h2>4. Erstellung eines Kontos</h2>
+        <p>Der Nutzer muss ein persönliches Konto erstellen und genaue Informationen angeben. Er verpflichtet sich, die Vertraulichkeit seiner Anmeldedaten zu wahren und ist für jede Nutzung seines Kontos verantwortlich.</p>
+      </div>
+      <div class="section">
+        <h2>5. Persönliche Daten</h2>
+        <p>Applidia verarbeitet persönliche Gesundheitsdaten gemäß dem Schweizer Bundesgesetz über den Datenschutz (DSG) und gegebenenfalls der Datenschutz-Grundverordnung (DSGVO). Die Daten werden sicher und verschlüsselt gespeichert und ohne ausdrückliche Zustimmung nicht an Dritte weitergegeben, es sei denn, es besteht eine gesetzliche Verpflichtung.</p>
+        <p>Rechte des Nutzers:</p>
+        <ul>
+          <li>Zugang zu seinen Daten</li>
+          <li>Berichtigung und Löschung</li>
+          <li>Widerruf der Einwilligung</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>6. Haftung</h2>
+        <p>Sie sind für die Nutzung der Anwendung und die von Ihnen eingegebenen Informationen verantwortlich. Applidia Sàrl kann nicht für die Folgen einer unsachgemäßen Nutzung der Anwendung haftbar gemacht werden. Applidia Sàrl bemüht sich, einen zuverlässigen Dienst bereitzustellen, garantiert jedoch nicht die Genauigkeit oder ständige Verfügbarkeit der Dienste. Applidia Sàrl haftet nicht für direkte oder indirekte Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung der Anwendung entstehen.</p>
+      </div>
+      <div class="section">
+        <h2>7. Geistiges Eigentum</h2>
+        <p>Alle Inhalte der Anwendung (Texte, Logos, Schnittstellen, Algorithmen usw.) sind durch Gesetze zum Schutz des geistigen Eigentums geschützt und sind das ausschließliche Eigentum von Applidia Sàrl oder seinen Partnern. Sie dürfen ohne vorherige Genehmigung keine abgeleiteten Werke reproduzieren, verteilen oder erstellen.</p>
+      </div>
+      <div class="section">
+        <h2>8. Änderung der ANB</h2>
+        <p>Appllidia Sàrl behält sich das Recht vor, diese ANB jederzeit zu ändern. Die Nutzer werden über Änderungen durch eine Benachrichtigung in der Anwendung informiert. Die fortgesetzte Nutzung der Anwendung nach einer Änderung gilt als Annahme der neuen ANB.</p>
+      </div>
+      <div class="section">
+        <h2>9. Anwendbares Recht und Gerichtsstand</h2>
+        <p>Diese allgemeinen Bedingungen unterliegen dem Schweizer Recht. Alle Streitigkeiten im Zusammenhang mit der Anwendung oder diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte des Bezirks Lausanne, Schweiz. Die französische Version der ANB ist maßgebend.</p>
+      </div>
+      <div class="section">
+        <h2>10. Kontakt</h2>
+        <p>Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte unter folgender Adresse: info@applidia.app</p>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>5. Données personnelles</h2>
-      <p>Applidia traite les données personnelles de santé conformément à la Loi fédérale Suisse sue la protection des données (LPD) et le cas échéant, au Règlement général sur la protection des données (RGPD). Les données sont stockées de manière sécurisée, chiffrée, et ne sont transmises à aucun tiers sans consentement explicite, sauf obligation légale.</p>
-      <p>Droit de l’utilisateur :</p>
-      <ul>
-        <li>Accès à ses données</li>
-        <li>Rectification et suppression</li>
-        <li>Retrait du consentement</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>6. Responsabilité</h2>
-      <p>Vous êtes responsable de l’utilisation de l’application et des informations que vous y saisissez. Applidia Sàrl ne saurait être tenu responsable des conséquences d’une mauvaise utilisation de l’application. Applidia Sàrl s’efforce de fournir un service fiable, mais ne garantit pas l’exactitude ou la disponibilité permanente des services. Applidia Sàrl ne pourra être tenu responsable des dommages directs ou indirects résultant de l’utilisation ou de l’impossibilité d’utiliser l’application.</p>
-    </div>
-
-    <div class="section">
-      <h2>7. Propriété intellectuelle</h2>
-      <p>Tous les contenus de l’application (textes, logos, interfaces, algorithmes, etc.) sont protégés par les lois sur la protection intellectuelle et sont la propriété exclusive de Applidia Sàrl ou de ses partenaires. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans autorisation préalable.</p>
-    </div>
-
-    <div class="section">
-      <h2>8. Modification des CGU</h2>
-      <p>Appllidia Sàrl se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés des modifications par notification dans l’application. La poursuite de l’utilisation de l’application après modification vaut acceptation des nouvelles CGU.</p>
-    </div>
-
-    <div class="section">
-      <h2>9. Droit applicable et juridiction compétente</h2>
-      <p>Les présentes conditions générales sont soumises au droit Suisse. Tout litige relatif à l’application ou aux présentes conditions sera soumis à la compétence exclusive des tribunaux de l’arrondissement de Lausanne, Suisse. La version française des CGU fait foi.</p>
-    </div>
-
-    <div class="section">
-      <h2>10. Contact</h2>
-      <p>Pour toute question concernant ces conditions, veuillez nous contacter à l’adresse suivante : info@applidia.app</p>
+    <!-- Contenu Italien -->
+    <div id="it" class="lang-content">
+      <h1>Termini e Condizioni d'Uso – Applidia</h1>
+      <p><em>Ultimo aggiornamento: 26.05.2025</em></p>
+      <div class="section">
+        <h2>1. Presentazione dell'applicazione</h2>
+        <p>Benvenuti nell'applicazione. Applidia è un'applicazione mobile sviluppata da Appplidia Sàrl. L'applicazione consente agli utenti di monitorare il proprio diabete e registrare dati sanitari (glicemie, insuline, ecc.).</p>
+      </div>
+      <div class="section">
+        <h2>2. Accettazione dei Termini</h2>
+        <p>L'uso dell'applicazione implica l'accettazione piena e completa di questi Termini e Condizioni d'Uso. Se l'utente non accetta tutti o parte dei Termini, deve astenersi dall'utilizzare l'applicazione. Queste condizioni possono essere modificate in qualsiasi momento. È responsabilità dell'utente consultare regolarmente questa pagina per essere a conoscenza delle modifiche.</p>
+      </div>
+      <div class="section">
+        <h2>3. Uso dell'applicazione</h2>
+        <p>L'applicazione è riservata a un uso personale e non sostituisce in alcun caso un parere medico. In caso di emergenza medica, è necessario consultare un medico o contattare i servizi di emergenza. L'accesso ad Applidia è gratuito (esclusi i costi di connessione), ma alcune funzionalità avanzate possono essere soggette a un abbonamento a pagamento. L'utente deve avere almeno 16 anni o disporre dell'autorizzazione di un tutore legale.</p>
+      </div>
+      <div class="section">
+        <h2>4. Creazione di un account</h2>
+        <p>L'utente deve creare un account personale e fornire informazioni accurate. Si impegna a mantenere la riservatezza delle proprie credenziali di accesso ed è responsabile di qualsiasi uso del proprio account.</p>
+      </div>
+      <div class="section">
+        <h2>5. Dati personali</h2>
+        <p>Applidia tratta i dati sanitari personali in conformità con la Legge federale svizzera sulla protezione dei dati (LPD) e, se del caso, con il Regolamento generale sulla protezione dei dati (GDPR). I dati sono conservati in modo sicuro, crittografati e non vengono trasmessi a terzi senza un consenso esplicito, salvo obbligo di legge.</p>
+        <p>Diritti dell'utente:</p>
+        <ul>
+          <li>Accesso ai propri dati</li>
+          <li>Rettifica e cancellazione</li>
+          <li>Revoca del consenso</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>6. Responsabilità</h2>
+        <p>L'utente è responsabile dell'uso dell'applicazione e delle informazioni che vi inserisce. Applidia Sàrl non può essere ritenuta responsabile delle conseguenze di un uso improprio dell'applicazione. Applidia Sàrl si impegna a fornire un servizio affidabile, ma non garantisce l'accuratezza o la disponibilità permanente dei servizi. Applidia Sàrl non sarà responsabile per danni diretti o indiretti derivanti dall'uso o dall'impossibilità di utilizzare l'applicazione.</p>
+      </div>
+      <div class="section">
+        <h2>7. Proprietà intellettuale</h2>
+        <p>Tutti i contenuti dell'applicazione (testi, loghi, interfacce, algoritmi, ecc.) sono protetti dalle leggi sulla proprietà intellettuale e sono di proprietà esclusiva di Applidia Sàrl o dei suoi partner. Non è possibile riprodurre, distribuire o creare opere derivate senza previa autorizzazione.</p>
+      </div>
+      <div class="section">
+        <h2>8. Modifica dei Termini</h2>
+        <p>Appllidia Sàrl si riserva il diritto di modificare i presenti Termini in qualsiasi momento. Gli utenti saranno informati delle modifiche tramite una notifica all'interno dell'applicazione. L'uso continuato dell'applicazione dopo la modifica costituisce accettazione dei nuovi Termini.</p>
+      </div>
+      <div class="section">
+        <h2>9. Legge applicabile e foro competente</h2>
+        <p>Le presenti condizioni generali sono soggette al diritto svizzero. Qualsiasi controversia relativa all'applicazione o alle presenti condizioni sarà soggetta alla giurisdizione esclusiva dei tribunali del distretto di Losanna, Svizzera. La versione francese dei Termini è quella che fa fede.</p>
+      </div>
+      <div class="section">
+        <h2>10. Contatti</h2>
+        <p>Per qualsiasi domanda riguardante questi termini, vi preghiamo di contattarci al seguente indirizzo: info@applidia.app</p>
+      </div>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Applidia Sàrl. Tous droits réservés.
   </footer>
+
+  <script>
+    function switchLang(lang) {
+      // Hide all language contents
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      // Deactivate all buttons
+      document.querySelectorAll('.lang-selector button').forEach(function(el) {
+        el.classList.remove('active');
+      });
+
+      // Show selected language content
+      document.getElementById(lang).classList.add('active');
+      // Activate selected button
+      document.getElementById('btn-' + lang).classList.add('active');
+      
+      // Update page language attribute
+      document.documentElement.lang = lang;
+    }
+  </script>
 </body>
 </html>
