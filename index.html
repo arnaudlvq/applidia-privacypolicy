@@ -3,76 +3,360 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conditions Générales d’Utilisation – Applidia</title>
+  <title>Documents Légaux – Applidia</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+    * {
       margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      color: #2d3748;
+      min-height: 100vh;
+    }
+
     .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 20px 60px rgba(40, 92, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    h1 {
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 10px;
-    }
-    p, ul {
-      margin-bottom: 15px;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .lang-selector {
-      text-align: right;
-      margin-bottom: 20px;
-    }
-    .lang-selector button {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      padding: 5px 10px;
-      cursor: pointer;
-      margin-left: 5px;
-      border-radius: 4px;
-    }
-    .lang-selector button.active {
-      background-color: #2c3e50;
+
+    /* Header with gradient */
+    .header {
+      background: linear-gradient(135deg, #285CFF 0%, #1a47cc 100%);
+      padding: 24px 40px;
       color: white;
-      border-color: #2c3e50;
+      box-shadow: 0 4px 20px rgba(40, 92, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
+
+    .logo-img {
+      height: 50px;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* Language Selector */
+    .lang-selector {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 24px 40px 0;
+      background: white;
+    }
+
+    .lang-selector button {
+      background: #f7fafc;
+      border: 2px solid #e2e8f0;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      color: #4a5568;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      letter-spacing: 0.5px;
+    }
+
+    .lang-selector button:hover {
+      background: #edf2f7;
+      border-color: #cbd5e0;
+      transform: translateY(-1px);
+    }
+
+    .lang-selector button.active {
+      background: linear-gradient(135deg, #285CFF 0%, #1a47cc 100%);
+      color: white;
+      border-color: #285CFF;
+      box-shadow: 0 4px 12px rgba(40, 92, 255, 0.3);
+    }
+
     .lang-content {
       display: none;
     }
+
     .lang-content.active {
       display: block;
     }
+
+    /* Navigation */
+    .page-nav {
+      text-align: center;
+      padding: 24px 40px;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .page-nav a {
+      text-decoration: none;
+      color: #4a5568;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .page-nav a:hover {
+      color: #285CFF;
+      background: #f0f5ff;
+    }
+
+    .page-nav a.active {
+      color: #285CFF;
+      background: #f0f5ff;
+    }
+
+    .page-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 3px;
+      background: linear-gradient(90deg, #285CFF 0%, #1a47cc 100%);
+      border-radius: 3px 3px 0 0;
+    }
+
+    /* Content Area */
+    .content-wrapper {
+      padding: 40px;
+    }
+
+    h1 {
+      color: #1a202c;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.3;
+      position: relative;
+      padding-bottom: 16px;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #285CFF 0%, #1a47cc 100%);
+      border-radius: 2px;
+    }
+
+    h2 {
+      color: #285CFF;
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      color: #2d3748;
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #4a5568;
+      font-size: 15px;
+    }
+
+    p em {
+      color: #718096;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    p strong {
+      color: #2d3748;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 20px;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: #4a5568;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background: linear-gradient(135deg, #285CFF 0%, #1a47cc 100%);
+      border-radius: 50%;
+    }
+
+    .section {
+      margin-bottom: 32px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .page-section {
+      display: none;
+    }
+
+    .page-section.active {
+      display: block;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      font-size: 0.9em;
-      color: #777;
-      border-top: 1px solid #eee;
-      padding-top: 10px;
-      margin-top: 20px;
+      font-size: 14px;
+      color: #718096;
+      padding: 24px 40px;
+      background: #f7fafc;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        border-radius: 12px;
+      }
+
+      .header {
+        padding: 24px 24px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .lang-selector {
+        padding: 16px 24px 0;
+        gap: 6px;
+      }
+
+      .lang-selector button {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+
+      .page-nav {
+        padding: 16px 24px;
+        gap: 8px;
+      }
+
+      .page-nav a {
+        padding: 8px 14px;
+        font-size: 13px;
+      }
+
+      .content-wrapper {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 17px;
+      }
+
+      p, ul li {
+        font-size: 14px;
+      }
+
+      footer {
+        padding: 20px 24px;
+        font-size: 13px;
+      }
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e0;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a0aec0;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <img src="logo.svg" alt="Applidia Logo" class="logo-img">
+      <span class="logo-text">Applidia</span>
+    </div>
+
+    <!-- Language Selector -->
     <div class="lang-selector">
       <button id="btn-fr" class="active" onclick="switchLang('fr')">FR</button>
       <button id="btn-en" onclick="switchLang('en')">EN</button>
@@ -80,220 +364,1102 @@
       <button id="btn-it" onclick="switchLang('it')">IT</button>
     </div>
 
-    <!-- Contenu Français -->
-    <div id="fr" class="lang-content active">
-      <h1>Conditions Générales d’Utilisation – Applidia</h1>
-      <p><em>Dernière mise à jour : 26.05.2025</em></p>
-      <div class="section">
-        <h2>1. Présentation de l’application</h2>
-        <p>Bienvenue dans l’application. Applidia est une application mobile développée par Appplidia Sàrl. L’application permet aux utilisateurs de suivre leur diabète, enregistrer des données de santé (glycémies, insulines, etc.).</p>
+    <!-- Navigation -->
+    <div class="lang-content lang-fr active">
+      <nav class="page-nav">
+        <a href="#cgu" class="active" onclick="switchPage('cgu', event)">Conditions d'Utilisation</a>
+        <a href="#qualification" onclick="switchPage('qualification', event)">Note de Qualification</a>
+        <a href="#confidentialite" onclick="switchPage('confidentialite', event)">Politique de Confidentialité</a>
+      </nav>
+    </div>
+    <div class="lang-content lang-en">
+      <nav class="page-nav">
+        <a href="#cgu" class="active" onclick="switchPage('cgu', event)">Terms of Service</a>
+        <a href="#qualification" onclick="switchPage('qualification', event)">Software Qualification Note</a>
+        <a href="#confidentialite" onclick="switchPage('confidentialite', event)">Privacy Policy</a>
+      </nav>
+    </div>
+    <div class="lang-content lang-de">
+      <nav class="page-nav">
+        <a href="#cgu" class="active" onclick="switchPage('cgu', event)">Allgemeine Nutzungsbedingungen</a>
+        <a href="#qualification" onclick="switchPage('qualification', event)">Hinweis zur Software-Qualifizierung</a>
+        <a href="#confidentialite" onclick="switchPage('confidentialite', event)">Datenschutzrichtlinie</a>
+      </nav>
+    </div>
+    <div class="lang-content lang-it">
+      <nav class="page-nav">
+        <a href="#cgu" class="active" onclick="switchPage('cgu', event)">Termini e Condizioni d'Uso</a>
+        <a href="#qualification" onclick="switchPage('qualification', event)">Nota di Qualificazione del Software</a>
+        <a href="#confidentialite" onclick="switchPage('confidentialite', event)">Informativa sulla Privacy</a>
+      </nav>
+    </div>
+
+    <!-- ================================================== -->
+    <!--    SECTION 1: Conditions Générales d'Utilisation   -->
+    <!-- ================================================== -->
+    <div id="cgu" class="page-section active">
+      <div class="content-wrapper">
+      <!-- Contenu Français -->
+      <div class="lang-content lang-fr active">
+        <h1>Conditions Générales d’Utilisation – Applidia</h1>
+        <p><em>Dernière mise à jour : 26.05.2025</em></p>
+        <div class="section">
+          <h2>1. Présentation de l’application</h2>
+          <p>Bienvenue dans l’application. Applidia est une application mobile développée par Appplidia Sàrl. L’application permet aux utilisateurs de suivre leur diabète, enregistrer des données de santé (glycémies, insulines, etc.).</p>
+        </div>
+        <div class="section">
+          <h2>2. Acceptation des CGU</h2>
+          <p>L’utilisation de l’application implique l’acceptation pleine et entière des présentes Conditions Générales d’Utilisation. Si l’utilisateur n’accepte tout ou partie des CGU, il doit s’abstenir d’utiliser l’application. Ces conditions peuvent être modifiées à tout moment. Il est de votre responsabilité de consulter régulièrement cette page pour prendre connaissances des modifications.</p>
+        </div>
+        <div class="section">
+          <h2>3. Utilisation de l’application</h2>
+          <p>L’application est réservée à un usage personnel et ne remplace en aucun cas un avis médical. En cas d’urgence médicale, il convient de consulter un médecin ou de contacter les services d’urgences. L’accès à Applidia est gratuit (hors frais de connexions), mais certaines fonctionnalités avancées peuvent être soumises à un abonnement payant. L’utilisateur doit être âgé d’au moins 16 ans ou disposer de l’autorisation d’un représentant légal.</p>
+        </div>
+        <div class="section">
+          <h2>4. Création d’un compte</h2>
+          <p>L’utilisateur doit créer un compte personnel et fournir des informations exactes. Il s’engage à maintenir la confidentialité de ses identifiants et est responsable de toute utilisation de son compte.</p>
+        </div>
+        <div class="section">
+          <h2>5. Données personnelles</h2>
+          <p>Applidia traite les données personnelles de santé conformément à la Loi fédérale Suisse sue la protection des données (LPD) et le cas échéant, au Règlement général sur la protection des données (RGPD). Les données sont stockées de manière sécurisée, chiffrée, et ne sont transmises à aucun tiers sans consentement explicite, sauf obligation légale.</p>
+          <p>Droit de l’utilisateur :</p>
+          <ul>
+            <li>Accès à ses données</li>
+            <li>Rectification et suppression</li>
+            <li>Retrait du consentement</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>6. Responsabilité</h2>
+          <p>Vous êtes responsable de l’utilisation de l’application et des informations que vous y saisissez. Applidia Sàrl ne saurait être tenu responsable des conséquences d’une mauvaise utilisation de l’application. Applidia Sàrl s’efforce de fournir un service fiable, mais ne garantit pas l’exactitude ou la disponibilité permanente des services. Applidia Sàrl ne pourra être tenu responsable des dommages directs ou indirects résultant de l’utilisation ou de l’impossibilité d’utiliser l’application.</p>
+        </div>
+        <div class="section">
+          <h2>7. Propriété intellectuelle</h2>
+          <p>Tous les contenus de l’application (textes, logos, interfaces, algorithmes, etc.) sont protégés par les lois sur la protection intellectuelle et sont la propriété exclusive de Applidia Sàrl ou de ses partenaires. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans autorisation préalable.</p>
+        </div>
+        <div class="section">
+          <h2>8. Modification des CGU</h2>
+          <p>Appllidia Sàrl se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés des modifications par notification dans l’application. La poursuite de l’utilisation de l’application après modification vaut acceptation des nouvelles CGU.</p>
+        </div>
+        <div class="section">
+          <h2>9. Droit applicable et juridiction compétente</h2>
+          <p>Les présentes conditions générales sont soumises au droit Suisse. Tout litige relatif à l’application ou aux présentes conditions sera soumis à la compétence exclusive des tribunaux de l’arrondissement de Lausanne, Suisse. La version française des CGU fait foi.</p>
+        </div>
+        <div class="section">
+          <h2>10. Contact</h2>
+          <p>Pour toute question concernant ces conditions, veuillez nous contacter à l’adresse suivante : info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>2. Acceptation des CGU</h2>
-        <p>L’utilisation de l’application implique l’acceptation pleine et entière des présentes Conditions Générales d’Utilisation. Si l’utilisateur n’accepte tout ou partie des CGU, il doit s’abstenir d’utiliser l’application. Ces conditions peuvent être modifiées à tout moment. Il est de votre responsabilité de consulter régulièrement cette page pour prendre connaissances des modifications.</p>
+
+      <!-- Contenu Anglais -->
+      <div class="lang-content lang-en">
+        <h1>Terms of Service – Applidia</h1>
+        <p><em>Last updated: 26.05.2025</em></p>
+        <div class="section">
+          <h2>1. Application Overview</h2>
+          <p>Welcome to the application. Applidia is a mobile application developed by Appplidia Sàrl. The application allows users to track their diabetes, and record health data (blood glucose, insulin, etc.).</p>
+        </div>
+        <div class="section">
+          <h2>2. Acceptance of Terms</h2>
+          <p>Use of the application implies full and complete acceptance of these Terms of Service. If the user does not accept all or part of the Terms, they must refrain from using the application. These terms may be modified at any time. It is your responsibility to regularly consult this page to be aware of any changes.</p>
+        </div>
+        <div class="section">
+          <h2>3. Use of the Application</h2>
+          <p>The application is for personal use only and is not a substitute for medical advice. In case of a medical emergency, you should consult a doctor or contact emergency services. Access to Applidia is free (excluding connection costs), but some advanced features may be subject to a paid subscription. The user must be at least 16 years old or have the authorization of a legal guardian.</p>
+        </div>
+        <div class="section">
+          <h2>4. Account Creation</h2>
+          <p>The user must create a personal account and provide accurate information. The user agrees to maintain the confidentiality of their login credentials and is responsible for all use of their account.</p>
+        </div>
+        <div class="section">
+          <h2>5. Personal Data</h2>
+          <p>Applidia processes personal health data in accordance with the Swiss Federal Act on Data Protection (FADP) and, where applicable, the General Data Protection Regulation (GDPR). Data is stored securely, encrypted, and is not transmitted to any third party without explicit consent, except as required by law.</p>
+          <p>User rights:</p>
+          <ul>
+            <li>Access to their data</li>
+            <li>Rectification and deletion</li>
+            <li>Withdrawal of consent</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>6. Liability</h2>
+          <p>You are responsible for the use of the application and the information you enter. Applidia Sàrl cannot be held responsible for the consequences of improper use of the application. Applidia Sàrl strives to provide a reliable service but does not guarantee the accuracy or permanent availability of the services. Applidia Sàrl shall not be liable for any direct or indirect damages resulting from the use or inability to use the application.</p>
+        </div>
+        <div class="section">
+          <h2>7. Intellectual Property</h2>
+          <p>All content of the application (texts, logos, interfaces, algorithms, etc.) is protected by intellectual property laws and is the exclusive property of Applidia Sàrl or its partners. You may not reproduce, distribute, or create derivative works without prior authorization.</p>
+        </div>
+        <div class="section">
+          <h2>8. Modification of Terms</h2>
+          <p>Appllidia Sàrl reserves the right to modify these Terms at any time. Users will be informed of changes via a notification within the application. Continued use of the application after modification constitutes acceptance of the new Terms.</p>
+        </div>
+        <div class="section">
+          <h2>9. Applicable Law and Jurisdiction</h2>
+          <p>These general conditions are subject to Swiss law. Any dispute relating to the application or these conditions will be subject to the exclusive jurisdiction of the courts of the district of Lausanne, Switzerland. The French version of the Terms is authoritative.</p>
+        </div>
+        <div class="section">
+          <h2>10. Contact</h2>
+          <p>For any questions regarding these terms, please contact us at the following address: info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>3. Utilisation de l’application</h2>
-        <p>L’application est réservée à un usage personnel et ne remplace en aucun cas un avis médical. En cas d’urgence médicale, il convient de consulter un médecin ou de contacter les services d’urgences. L’accès à Applidia est gratuit (hors frais de connexions), mais certaines fonctionnalités avancées peuvent être soumises à un abonnement payant. L’utilisateur doit être âgé d’au moins 16 ans ou disposer de l’autorisation d’un représentant légal.</p>
+
+      <!-- Contenu Allemand -->
+      <div class="lang-content lang-de">
+        <h1>Allgemeine Nutzungsbedingungen – Applidia</h1>
+        <p><em>Letzte Aktualisierung: 26.05.2025</em></p>
+        <div class="section">
+          <h2>1. Vorstellung der Anwendung</h2>
+          <p>Willkommen in der Anwendung. Applidia ist eine mobile Anwendung, die von Appplidia Sàrl entwickelt wurde. Die Anwendung ermöglicht es den Nutzern, ihren Diabetes zu überwachen und Gesundheitsdaten (Blutzucker, Insulin usw.) aufzuzeichnen.</p>
+        </div>
+        <div class="section">
+          <h2>2. Annahme der ANB</h2>
+          <p>Die Nutzung der Anwendung setzt die vollständige Annahme dieser Allgemeinen Nutzungsbedingungen voraus. Wenn der Nutzer die ANB ganz oder teilweise nicht akzeptiert, muss er von der Nutzung der Anwendung absehen. Diese Bedingungen können jederzeit geändert werden. Es liegt in Ihrer Verantwortung, diese Seite regelmäßig zu konsultieren, um sich über Änderungen zu informieren.</p>
+        </div>
+        <div class="section">
+          <h2>3. Nutzung der Anwendung</h2>
+          <p>Die Anwendung ist nur für den persönlichen Gebrauch bestimmt und ersetzt keinesfalls eine ärztliche Beratung. Im Falle eines medizinischen Notfalls sollten Sie einen Arzt konsultieren oder den Notdienst kontaktieren. Der Zugang zu Applidia ist kostenlos (ohne Verbindungskosten), aber einige erweiterte Funktionen können einem kostenpflichtigen Abonnement unterliegen. Der Nutzer muss mindestens 16 Jahre alt sein oder die Genehmigung eines Erziehungsberechtigten haben.</p>
+        </div>
+        <div class="section">
+          <h2>4. Erstellung eines Kontos</h2>
+          <p>Der Nutzer muss ein persönliches Konto erstellen und genaue Informationen angeben. Er verpflichtet sich, die Vertraulichkeit seiner Anmeldedaten zu wahren und ist für jede Nutzung seines Kontos verantwortlich.</p>
+        </div>
+        <div class="section">
+          <h2>5. Persönliche Daten</h2>
+          <p>Applidia verarbeitet persönliche Gesundheitsdaten gemäß dem Schweizer Bundesgesetz über den Datenschutz (DSG) und gegebenenfalls der Datenschutz-Grundverordnung (DSGVO). Die Daten werden sicher und verschlüsselt gespeichert und ohne ausdrückliche Zustimmung nicht an Dritte weitergegeben, es sei denn, es besteht eine gesetzliche Verpflichtung.</p>
+          <p>Rechte des Nutzers:</p>
+          <ul>
+            <li>Zugang zu seinen Daten</li>
+            <li>Berichtigung und Löschung</li>
+            <li>Widerruf der Einwilligung</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>6. Haftung</h2>
+          <p>Sie sind für die Nutzung der Anwendung und die von Ihnen eingegebenen Informationen verantwortlich. Applidia Sàrl kann nicht für die Folgen einer unsachgemäßen Nutzung der Anwendung haftbar gemacht werden. Applidia Sàrl bemüht sich, einen zuverlässigen Dienst bereitzustellen, garantiert jedoch nicht die Genauigkeit oder ständige Verfügbarkeit der Dienste. Applidia Sàrl haftet nicht für direkte oder indirekte Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung der Anwendung entstehen.</p>
+        </div>
+        <div class="section">
+          <h2>7. Geistiges Eigentum</h2>
+          <p>Alle Inhalte der Anwendung (Texte, Logos, Schnittstellen, Algorithmen usw.) sind durch Gesetze zum Schutz des geistigen Eigentums geschützt und sind das ausschließliche Eigentum von Applidia Sàrl oder seinen Partnern. Sie dürfen ohne vorherige Genehmigung keine abgeleiteten Werke reproduzieren, verteilen oder erstellen.</p>
+        </div>
+        <div class="section">
+          <h2>8. Änderung der ANB</h2>
+          <p>Appllidia Sàrl behält sich das Recht vor, diese ANB jederzeit zu ändern. Die Nutzer werden über Änderungen durch eine Benachrichtigung in der Anwendung informiert. Die fortgesetzte Nutzung der Anwendung nach einer Änderung gilt als Annahme der neuen ANB.</p>
+        </div>
+        <div class="section">
+          <h2>9. Anwendbares Recht und Gerichtsstand</h2>
+          <p>Diese allgemeinen Bedingungen unterliegen dem Schweizer Recht. Alle Streitigkeiten im Zusammenhang mit der Anwendung oder diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte des Bezirks Lausanne, Schweiz. Die französische Version der ANB ist maßgebend.</p>
+        </div>
+        <div class="section">
+          <h2>10. Kontakt</h2>
+          <p>Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte unter folgender Adresse: info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>4. Création d’un compte</h2>
-        <p>L’utilisateur doit créer un compte personnel et fournir des informations exactes. Il s’engage à maintenir la confidentialité de ses identifiants et est responsable de toute utilisation de son compte.</p>
+
+      <!-- Contenu Italien -->
+      <div class="lang-content lang-it">
+        <h1>Termini e Condizioni d'Uso – Applidia</h1>
+        <p><em>Ultimo aggiornamento: 26.05.2025</em></p>
+        <div class="section">
+          <h2>1. Presentazione dell'applicazione</h2>
+          <p>Benvenuti nell'applicazione. Applidia è un'applicazione mobile sviluppata da Appplidia Sàrl. L'applicazione consente agli utenti di monitorare il proprio diabete e registrare dati sanitari (glicemie, insuline, ecc.).</p>
+        </div>
+        <div class="section">
+          <h2>2. Accettazione dei Termini</h2>
+          <p>L'uso dell'applicazione implica l'accettazione piena e completa di questi Termini e Condizioni d'Uso. Se l'utente non accetta tutti o parte dei Termini, deve astenersi dall'utilizzare l'applicazione. Queste condizioni possono essere modificate in qualsiasi momento. È responsabilità dell'utente consultare regolarmente questa pagina per essere a conoscenza delle modifiche.</p>
+        </div>
+        <div class="section">
+          <h2>3. Uso dell'applicazione</h2>
+          <p>L'applicazione è riservata a un uso personale e non sostituisce in alcun caso un parere medico. In caso di emergenza medica, è necessario consultare un medico o contattare i servizi di emergenza. L'accesso ad Applidia è gratuito (esclusi i costi di connessione), ma alcune funzionalità avanzate possono essere soggette a un abbonamento a pagamento. L'utente deve avere almeno 16 anni o disporre dell'autorizzazione di un tutore legale.</p>
+        </div>
+        <div class="section">
+          <h2>4. Creazione di un account</h2>
+          <p>L'utente deve creare un account personale e fornire informazioni accurate. Si impegna a mantenere la riservatezza delle proprie credenziali di accesso ed è responsabile di qualsiasi uso del proprio account.</p>
+        </div>
+        <div class="section">
+          <h2>5. Dati personali</h2>
+          <p>Applidia tratta i dati sanitari personali in conformità con la Legge federale svizzera sulla protezione dei dati (LPD) e, se del caso, con il Regolamento generale sulla protezione dei dati (GDPR). I dati sono conservati in modo sicuro, crittografati e non vengono trasmessi a terzi senza un consenso esplicito, salvo obbligo di legge.</p>
+          <p>Diritti dell'utente:</p>
+          <ul>
+            <li>Accesso ai propri dati</li>
+            <li>Rettifica e cancellazione</li>
+            <li>Revoca del consenso</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>6. Responsabilità</h2>
+          <p>L'utente è responsabile dell'uso dell'applicazione e delle informazioni che vi inserisce. Applidia Sàrl non può essere ritenuta responsabile delle conseguenze di un uso improprio dell'applicazione. Applidia Sàrl si impegna a fornire un servizio affidabile, ma non garantisce l'accuratezza o la disponibilità permanente dei servizi. Applidia Sàrl non sarà responsabile per danni diretti o indiretti derivanti dall'uso o dall'impossibilità di utilizzare l'applicazione.</p>
+        </div>
+        <div class="section">
+          <h2>7. Proprietà intellettuale</h2>
+          <p>Tutti i contenuti dell'applicazione (testi, loghi, interfacce, algoritmi, ecc.) sono protetti dalle leggi sulla proprietà intellettuale e sono di proprietà esclusiva di Applidia Sàrl o dei suoi partner. Non è possibile riprodurre, distribuire o creare opere derivate senza previa autorizzazione.</p>
+        </div>
+        <div class="section">
+          <h2>8. Modifica dei Termini</h2>
+          <p>Appllidia Sàrl si riserva il diritto di modificare i presenti Termini in qualsiasi momento. Gli utenti saranno informati delle modifiche tramite una notifica all'interno dell'applicazione. L'uso continuato dell'applicazione dopo la modifica costituisce accettazione dei nuovi Termini.</p>
+        </div>
+        <div class="section">
+          <h2>9. Legge applicabile e foro competente</h2>
+          <p>Le presenti condizioni generali sono soggette al diritto svizzero. Qualsiasi controversia relativa all'applicazione o alle presenti condizioni sarà soggetta alla giurisdizione esclusiva dei tribunali del distretto di Losanna, Svizzera. La versione francese dei Termini è quella che fa fede.</p>
+        </div>
+        <div class="section">
+          <h2>10. Contatti</h2>
+          <p>Per qualsiasi domanda riguardante questi termini, vi preghiamo di contattarci al seguente indirizzo: info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>5. Données personnelles</h2>
-        <p>Applidia traite les données personnelles de santé conformément à la Loi fédérale Suisse sue la protection des données (LPD) et le cas échéant, au Règlement général sur la protection des données (RGPD). Les données sont stockées de manière sécurisée, chiffrée, et ne sont transmises à aucun tiers sans consentement explicite, sauf obligation légale.</p>
-        <p>Droit de l’utilisateur :</p>
-        <ul>
-          <li>Accès à ses données</li>
-          <li>Rectification et suppression</li>
-          <li>Retrait du consentement</li>
-        </ul>
-      </div>
-      <div class="section">
-        <h2>6. Responsabilité</h2>
-        <p>Vous êtes responsable de l’utilisation de l’application et des informations que vous y saisissez. Applidia Sàrl ne saurait être tenu responsable des conséquences d’une mauvaise utilisation de l’application. Applidia Sàrl s’efforce de fournir un service fiable, mais ne garantit pas l’exactitude ou la disponibilité permanente des services. Applidia Sàrl ne pourra être tenu responsable des dommages directs ou indirects résultant de l’utilisation ou de l’impossibilité d’utiliser l’application.</p>
-      </div>
-      <div class="section">
-        <h2>7. Propriété intellectuelle</h2>
-        <p>Tous les contenus de l’application (textes, logos, interfaces, algorithmes, etc.) sont protégés par les lois sur la protection intellectuelle et sont la propriété exclusive de Applidia Sàrl ou de ses partenaires. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans autorisation préalable.</p>
-      </div>
-      <div class="section">
-        <h2>8. Modification des CGU</h2>
-        <p>Appllidia Sàrl se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés des modifications par notification dans l’application. La poursuite de l’utilisation de l’application après modification vaut acceptation des nouvelles CGU.</p>
-      </div>
-      <div class="section">
-        <h2>9. Droit applicable et juridiction compétente</h2>
-        <p>Les présentes conditions générales sont soumises au droit Suisse. Tout litige relatif à l’application ou aux présentes conditions sera soumis à la compétence exclusive des tribunaux de l’arrondissement de Lausanne, Suisse. La version française des CGU fait foi.</p>
-      </div>
-      <div class="section">
-        <h2>10. Contact</h2>
-        <p>Pour toute question concernant ces conditions, veuillez nous contacter à l’adresse suivante : info@applidia.app</p>
       </div>
     </div>
 
-    <!-- Contenu Anglais -->
-    <div id="en" class="lang-content">
-      <h1>Terms of Service – Applidia</h1>
-      <p><em>Last updated: 26.05.2025</em></p>
-      <div class="section">
-        <h2>1. Application Overview</h2>
-        <p>Welcome to the application. Applidia is a mobile application developed by Appplidia Sàrl. The application allows users to track their diabetes, and record health data (blood glucose, insulin, etc.).</p>
+    <!-- ================================================== -->
+    <!--       SECTION 2: Note de qualification logicielle      -->
+    <!-- ================================================== -->
+    <div id="qualification" class="page-section">
+      <div class="content-wrapper">
+      <!-- Contenu Français -->
+      <div class="lang-content lang-fr active">
+        <h1>Note de qualification logicielle</h1>
+        <p><em>Dernière mise à jour : 12.06.2025</em></p>
+        <p><strong>Objet :</strong> Application “Applidia” – Non-qualification en tant que dispositif médical</p>
+        <p><strong>Editeur :</strong> Applidia Sàrl</p>
+        <p><strong>Siège :</strong> Lausanne, Suisse</p>
+        <div class="section">
+          <h2>1. Contexte</h2>
+          <p>L’application Applidia est un logiciel mobile développé pour accompagner les personnes atteintes de diabète dans le suivi de leurs données personnelles de santé (par ex. glycémie, injections, tension artérielle, activité physique), dans une logique d’auto observation, sans analyse automatisée ni fonction de diagnostic, de prédiction ou de décision thérapeutique.</p>
+          <p>Cette note vise à démontrer que Applidia ne répond pas à la définition d’un dispositif médical au sens du Règlement (UE) 2017/745 (MDR) et de l’ODim Suisse, et ne relève donc pas de leur champ d’application.</p>
+        </div>
+        <div class="section">
+          <h2>2. Définition réglementaire d’un dispositif médical</h2>
+          <p>Selon l’article 2 du MDR (UE 2017/745) : Un dispositif médical est un instrument, appareil, logiciel, implant, réactif ou autre article destiné par le fabricant à être utilisé à des fins médicales spécifiques, notamment :</p>
+          <ul>
+            <li>Le diagnostic, la prévention, la surveillance, la prédiction, le pronostic, le traitement ou l’atténuation d’une maladie.</li>
+            <li>Le diagnostic, la surveillance, le traitement, l’atténuation ou la compensation d’une blessure ou d’un handicap.</li>
+          </ul>
+          <p>Selon la législation Suisse (ODim RS 812.213) : La définition est équivalente à celle du MDR, la Suisse étant alignée avec l’UE dans le domaine des dispositifs médicaux.</p>
+        </div>
+        <div class="section">
+          <h2>3. Fonctionnalités de l’application Applidia</h2>
+          <p>L’application Applidia permet à l’utilisateur :</p>
+          <ul>
+            <li>D’enregistrer manuellement des données de santé (glycémie, injections, médicaments, etc.)</li>
+            <li>De visualiser les tendances sous forme de graphiques ou listes</li>
+            <li>D’apporter des données à des fins personnelles ou pour les communiquer à un professionnel de santé</li>
+          </ul>
+          <p>L’application ne :</p>
+          <ul>
+            <li>Ne propose aucun diagnostique ou traitement</li>
+            <li>N’utilise aucun algorithme d’aide à la décision clinique</li>
+            <li>Ne se substitue en aucune manière à un avis médical</li>
+            <li>Fournit aucune recommandation médicale automatisée</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Analyse réglementaire</h2>
+          <p>Selon les lignes directrices de la Commission européenne (MEDDEV 2.1/6, MDCG 2019-11), un logiciel n’est pas considéré comme dispositif médical si :</p>
+          <ul>
+            <li>Il a uniquement pour finalité le bien-être général ou le suivi personnel de la santé</li>
+            <li>Il ne modifie pas la prise en charge médicale</li>
+            <li>Il ne remplit aucune fonction thérapeutique, diagnostique ou prédictive</li>
+          </ul>
+          <p>Applidia se limite à un usage personnel, à visée informative, sans visée médicale.</p>
+        </div>
+        <div class="section">
+          <h2>5. Conclusion</h2>
+          <p>L’application Applidia, en l’état de ses fonctionnalités :</p>
+          <ul>
+            <li>n’est pas destinée à une finalité médicale au sens du MDR ou de l’ODim,</li>
+            <li>ne modifie pas la prise en charge médicale des patients,</li>
+            <li>est assimilable à une application de bien-être/santé personnelle, au même titre qu’un carnet papier numérique.</li>
+          </ul>
+          <p>Par conséquent, Applidia ne constitue pas un dispositif médical et ne relève pas de l’obligation de marquage CE médical ni de conformité MDR/ODim.</p>
+        </div>
+        <div class="section">
+          <h2>6. Références</h2>
+          <ul>
+            <li>Règlement (UE) 2017/745 du Parlement européen et du Conseil</li>
+            <li>Ordonnance sur les dispositifs médicaux (ODim, RS 812.213)</li>
+            <li>Lignes directrices MDCG 2019-11 – Qualification des logiciels</li>
+            <li>MEDDEV 2.1/6 – Qualification des logiciels</li>
+          </ul>
+        </div>
       </div>
-      <div class="section">
-        <h2>2. Acceptance of Terms</h2>
-        <p>Use of the application implies full and complete acceptance of these Terms of Service. If the user does not accept all or part of the Terms, they must refrain from using the application. These terms may be modified at any time. It is your responsibility to regularly consult this page to be aware of any changes.</p>
+      <!-- Contenu Anglais -->
+      <div class="lang-content lang-en">
+        <h1>Software Qualification Note</h1>
+        <p><em>Last updated: 12.06.2025</em></p>
+        <p><strong>Subject:</strong> "Applidia" Application – Non-qualification as a Medical Device</p>
+        <p><strong>Publisher:</strong> Applidia Sàrl</p>
+        <p><strong>Headquarters:</strong> Lausanne, Switzerland</p>
+        <div class="section">
+          <h2>1. Context</h2>
+          <p>The Applidia application is a mobile software developed to support individuals with diabetes in tracking their personal health data (e.g., blood glucose, injections, blood pressure, physical activity), for self-monitoring purposes, without automated analysis or diagnostic, predictive, or therapeutic decision-making functions.</p>
+          <p>This note aims to demonstrate that Applidia does not meet the definition of a medical device under Regulation (EU) 2017/745 (MDR) and the Swiss MedDO, and therefore does not fall within their scope.</p>
+        </div>
+        <div class="section">
+          <h2>2. Regulatory Definition of a Medical Device</h2>
+          <p>According to Article 2 of the MDR (EU 2017/745): A medical device is any instrument, apparatus, software, implant, reagent, or other article intended by the manufacturer to be used for specific medical purposes, including:</p>
+          <ul>
+            <li>Diagnosis, prevention, monitoring, prediction, prognosis, treatment, or alleviation of a disease.</li>
+            <li>Diagnosis, monitoring, treatment, alleviation of, or compensation for, an injury or disability.</li>
+          </ul>
+          <p>Under Swiss legislation (MedDO RS 812.213): The definition is equivalent to that of the MDR, as Switzerland is aligned with the EU in the field of medical devices.</p>
+        </div>
+        <div class="section">
+          <h2>3. Applidia Application Features</h2>
+          <p>The Applidia application allows the user to:</p>
+          <ul>
+            <li>Manually record health data (blood glucose, injections, medications, etc.)</li>
+            <li>View trends as graphs or lists</li>
+            <li>Use data for personal purposes or to share with a healthcare professional</li>
+          </ul>
+          <p>The application does not:</p>
+          <ul>
+            <li>Offer any diagnosis or treatment</li>
+            <li>Use any clinical decision support algorithms</li>
+            <li>Substitute for medical advice in any way</li>
+            <li>Provide any automated medical recommendations</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Regulatory Analysis</h2>
+          <p>According to the European Commission guidelines (MEDDEV 2.1/6, MDCG 2019-11), software is not considered a medical device if:</p>
+          <ul>
+            <li>Its sole purpose is general well-being or personal health monitoring</li>
+            <li>It does not alter medical management</li>
+            <li>It performs no therapeutic, diagnostic, or predictive function</li>
+          </ul>
+          <p>Applidia is limited to personal, informational use, without a medical purpose.</p>
+        </div>
+        <div class="section">
+          <h2>5. Conclusion</h2>
+          <p>The Applidia application, in its current state of functionality:</p>
+          <ul>
+            <li>is not intended for a medical purpose within the meaning of the MDR or MedDO,</li>
+            <li>does not alter the medical management of patients,</li>
+            <li>is comparable to a personal well-being/health application, similar to a digital paper logbook.</li>
+          </ul>
+          <p>Therefore, Applidia does not constitute a medical device and is not subject to the requirement for CE marking for medical devices or compliance with MDR/MedDO.</p>
+        </div>
+        <div class="section">
+          <h2>6. References</h2>
+          <ul>
+            <li>Regulation (EU) 2017/745 of the European Parliament and of the Council</li>
+            <li>Ordinance on Medical Devices (MedDO, RS 812.213)</li>
+            <li>MDCG 2019-11 Guidance on Qualification and Classification of Software</li>
+            <li>MEDDEV 2.1/6 – Guidelines on the qualification and classification of stand alone software</li>
+          </ul>
+        </div>
       </div>
-      <div class="section">
-        <h2>3. Use of the Application</h2>
-        <p>The application is for personal use only and is not a substitute for medical advice. In case of a medical emergency, you should consult a doctor or contact emergency services. Access to Applidia is free (excluding connection costs), but some advanced features may be subject to a paid subscription. The user must be at least 16 years old or have the authorization of a legal guardian.</p>
+      <!-- Contenu Allemand -->
+      <div class="lang-content lang-de">
+        <h1>Hinweis zur Software-Qualifizierung</h1>
+        <p><em>Letzte Aktualisierung: 12.06.2025</em></p>
+        <p><strong>Betreff:</strong> Anwendung „Applidia“ – Nicht-Qualifizierung als Medizinprodukt</p>
+        <p><strong>Herausgeber:</strong> Applidia Sàrl</p>
+        <p><strong>Sitz:</strong> Lausanne, Schweiz</p>
+        <div class="section">
+          <h2>1. Kontext</h2>
+          <p>Die Anwendung Applidia ist eine mobile Software, die entwickelt wurde, um Menschen mit Diabetes bei der Verfolgung ihrer persönlichen Gesundheitsdaten (z. B. Blutzucker, Injektionen, Blutdruck, körperliche Aktivität) zu unterstützen, und zwar im Sinne der Selbstbeobachtung, ohne automatisierte Analyse oder Diagnose-, Vorhersage- oder Therapieentscheidungsfunktionen.</p>
+          <p>Dieser Hinweis soll nachweisen, dass Applidia nicht der Definition eines Medizinprodukts im Sinne der Verordnung (EU) 2017/745 (MDR) und der Schweizer MepV entspricht und daher nicht in deren Anwendungsbereich fällt.</p>
+        </div>
+        <div class="section">
+          <h2>2. Regulatorische Definition eines Medizinprodukts</h2>
+          <p>Gemäß Artikel 2 der MDR (EU 2017/745): Ein Medizinprodukt ist jedes Instrument, jeder Apparat, jede Software, jedes Implantat, jedes Reagenz oder jeder andere Artikel, der vom Hersteller für spezifische medizinische Zwecke bestimmt ist, insbesondere:</p>
+          <ul>
+            <li>Diagnose, Prävention, Überwachung, Vorhersage, Prognose, Behandlung oder Linderung einer Krankheit.</li>
+            <li>Diagnose, Überwachung, Behandlung, Linderung oder Kompensation einer Verletzung oder Behinderung.</li>
+          </ul>
+          <p>Nach Schweizer Recht (MepV SR 812.213): Die Definition ist äquivalent zu der der MDR, da die Schweiz im Bereich der Medizinprodukte mit der EU abgestimmt ist.</p>
+        </div>
+        <div class="section">
+          <h2>3. Funktionen der Applidia-Anwendung</h2>
+          <p>Die Applidia-Anwendung ermöglicht dem Benutzer:</p>
+          <ul>
+            <li>Manuelles Erfassen von Gesundheitsdaten (Blutzucker, Injektionen, Medikamente usw.)</li>
+            <li>Anzeigen von Trends in Form von Grafiken oder Listen</li>
+            <li>Verwendung von Daten für persönliche Zwecke oder zur Weitergabe an einen Gesundheitsdienstleister</li>
+          </ul>
+          <p>Die Anwendung:</p>
+          <ul>
+            <li>Bietet keine Diagnose oder Behandlung an</li>
+            <li>Verwendet keine Algorithmen zur klinischen Entscheidungsunterstützung</li>
+            <li>Ersetzt in keiner Weise eine ärztliche Beratung</li>
+            <li>Gibt keine automatisierten medizinischen Empfehlungen</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Regulatorische Analyse</h2>
+          <p>Gemäß den Leitlinien der Europäischen Kommission (MEDDEV 2.1/6, MDCG 2019-11) gilt eine Software nicht als Medizinprodukt, wenn:</p>
+          <ul>
+            <li>Ihr alleiniger Zweck das allgemeine Wohlbefinden oder die persönliche Gesundheitsüberwachung ist</li>
+            <li>Sie die medizinische Behandlung nicht verändert</li>
+            <li>Sie keine therapeutische, diagnostische oder prädiktive Funktion erfüllt</li>
+          </ul>
+          <p>Applidia ist auf den persönlichen, informativen Gebrauch ohne medizinischen Zweck beschränkt.</p>
+        </div>
+        <div class="section">
+          <h2>5. Schlussfolgerung</h2>
+          <p>Die Applidia-Anwendung in ihrem aktuellen Funktionsumfang:</p>
+          <ul>
+            <li>ist nicht für einen medizinischen Zweck im Sinne der MDR oder MepV bestimmt,</li>
+            <li>verändert die medizinische Behandlung von Patienten nicht,</li>
+            <li>ist vergleichbar mit einer Anwendung für persönliches Wohlbefinden/Gesundheit, ähnlich einem digitalen Papiertagebuch.</li>
+          </ul>
+          <p>Daher stellt Applidia kein Medizinprodukt dar und unterliegt nicht der Anforderung der CE-Kennzeichnung für Medizinprodukte oder der Konformität mit MDR/MepV.</p>
+        </div>
+        <div class="section">
+          <h2>6. Referenzen</h2>
+          <ul>
+            <li>Verordnung (EU) 2017/745 des Europäischen Parlaments und des Rates</li>
+            <li>Medizinprodukteverordnung (MepV, SR 812.213)</li>
+            <li>MDCG 2019-11 Leitlinien zur Qualifizierung und Klassifizierung von Software</li>
+            <li>MEDDEV 2.1/6 – Leitlinien zur Qualifizierung und Klassifizierung von eigenständiger Software</li>
+          </ul>
+        </div>
       </div>
-      <div class="section">
-        <h2>4. Account Creation</h2>
-        <p>The user must create a personal account and provide accurate information. The user agrees to maintain the confidentiality of their login credentials and is responsible for all use of their account.</p>
+      <!-- Contenu Italien -->
+      <div class="lang-content lang-it">
+        <h1>Nota di qualificazione del software</h1>
+        <p><em>Ultimo aggiornamento: 12.06.2025</em></p>
+        <p><strong>Oggetto:</strong> Applicazione "Applidia" – Non qualificazione come dispositivo medico</p>
+        <p><strong>Editore:</strong> Applidia Sàrl</p>
+        <p><strong>Sede:</strong> Losanna, Svizzera</p>
+        <div class="section">
+          <h2>1. Contesto</h2>
+          <p>L'applicazione Applidia è un software mobile sviluppato per supportare le persone con diabete nel monitoraggio dei loro dati sanitari personali (ad es. glicemia, iniezioni, pressione sanguigna, attività fisica), a scopo di auto-osservazione, senza analisi automatizzate o funzioni diagnostiche, predittive o decisionali terapeutiche.</p>
+          <p>Questa nota mira a dimostrare che Applidia non soddisfa la definizione di dispositivo medico ai sensi del Regolamento (UE) 2017/745 (MDR) e dell'ODmed svizzera, e quindi non rientra nel loro campo di applicazione.</p>
+        </div>
+        <div class="section">
+          <h2>2. Definizione normativa di un dispositivo medico</h2>
+          <p>Secondo l'articolo 2 del MDR (UE 2017/745): Un dispositivo medico è qualsiasi strumento, apparecchio, software, impianto, reagente o altro articolo destinato dal fabbricante ad essere utilizzato per scopi medici specifici, tra cui:</p>
+          <ul>
+            <li>Diagnosi, prevenzione, monitoraggio, previsione, prognosi, trattamento o attenuazione di una malattia.</li>
+            <li>Diagnosi, monitoraggio, trattamento, attenuazione o compensazione di una lesione o disabilità.</li>
+          </ul>
+          <p>Secondo la legislazione svizzera (ODmed RS 812.213): La definizione è equivalente a quella del MDR, poiché la Svizzera è allineata con l'UE nel campo dei dispositivi medici.</p>
+        </div>
+        <div class="section">
+          <h2>3. Funzionalità dell'applicazione Applidia</h2>
+          <p>L'applicazione Applidia consente all'utente di:</p>
+          <ul>
+            <li>Registrare manualmente dati sanitari (glicemia, iniezioni, farmaci, ecc.)</li>
+            <li>Visualizzare le tendenze sotto forma di grafici o elenchi</li>
+            <li>Utilizzare i dati per scopi personali o per condividerli con un professionista sanitario</li>
+          </ul>
+          <p>L'applicazione non:</p>
+          <ul>
+            <li>Offre alcuna diagnosi o trattamento</li>
+            <li>Utilizza alcun algoritmo di supporto decisionale clinico</li>
+            <li>Sostituisce in alcun modo il parere medico</li>
+            <li>Fornisce alcuna raccomandazione medica automatizzata</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Analisi normativa</h2>
+          <p>Secondo le linee guida della Commissione Europea (MEDDEV 2.1/6, MDCG 2019-11), un software non è considerato un dispositivo medico se:</p>
+          <ul>
+            <li>Il suo unico scopo è il benessere generale o il monitoraggio della salute personale</li>
+            <li>Non modifica la gestione medica</li>
+            <li>Non svolge alcuna funzione terapeutica, diagnostica o predittiva</li>
+          </ul>
+          <p>Applidia è limitata a un uso personale e informativo, senza scopo medico.</p>
+        </div>
+        <div class="section">
+          <h2>5. Conclusione</h2>
+          <p>L'applicazione Applidia, nel suo stato attuale di funzionalità:</p>
+          <ul>
+            <li>non è destinata a uno scopo medico ai sensi del MDR o dell'ODmed,</li>
+            <li>non modifica la gestione medica dei pazienti,</li>
+            <li>è assimilabile a un'applicazione per il benessere/la salute personale, simile a un diario cartaceo digitale.</li>
+          </ul>
+          <p>Pertanto, Applidia non costituisce un dispositivo medico e non è soggetta all'obbligo di marcatura CE per dispositivi medici né alla conformità con MDR/ODmed.</p>
+        </div>
+        <div class="section">
+          <h2>6. Riferimenti</h2>
+          <ul>
+            <li>Regolamento (UE) 2017/745 del Parlamento europeo e del Consiglio</li>
+            <li>Ordinanza sui dispositivi medici (ODmed, RS 812.213)</li>
+            <li>Linee guida MDCG 2019-11 sulla qualificazione e classificazione del software</li>
+            <li>MEDDEV 2.1/6 – Linee guida sulla qualificazione e classificazione del software autonomo</li>
+          </ul>
+        </div>
       </div>
-      <div class="section">
-        <h2>5. Personal Data</h2>
-        <p>Applidia processes personal health data in accordance with the Swiss Federal Act on Data Protection (FADP) and, where applicable, the General Data Protection Regulation (GDPR). Data is stored securely, encrypted, and is not transmitted to any third party without explicit consent, except as required by law.</p>
-        <p>User rights:</p>
-        <ul>
-          <li>Access to their data</li>
-          <li>Rectification and deletion</li>
-          <li>Withdrawal of consent</li>
-        </ul>
-      </div>
-      <div class="section">
-        <h2>6. Liability</h2>
-        <p>You are responsible for the use of the application and the information you enter. Applidia Sàrl cannot be held responsible for the consequences of improper use of the application. Applidia Sàrl strives to provide a reliable service but does not guarantee the accuracy or permanent availability of the services. Applidia Sàrl shall not be liable for any direct or indirect damages resulting from the use or inability to use the application.</p>
-      </div>
-      <div class="section">
-        <h2>7. Intellectual Property</h2>
-        <p>All content of the application (texts, logos, interfaces, algorithms, etc.) is protected by intellectual property laws and is the exclusive property of Applidia Sàrl or its partners. You may not reproduce, distribute, or create derivative works without prior authorization.</p>
-      </div>
-      <div class="section">
-        <h2>8. Modification of Terms</h2>
-        <p>Appllidia Sàrl reserves the right to modify these Terms at any time. Users will be informed of changes via a notification within the application. Continued use of the application after modification constitutes acceptance of the new Terms.</p>
-      </div>
-      <div class="section">
-        <h2>9. Applicable Law and Jurisdiction</h2>
-        <p>These general conditions are subject to Swiss law. Any dispute relating to the application or these conditions will be subject to the exclusive jurisdiction of the courts of the district of Lausanne, Switzerland. The French version of the Terms is authoritative.</p>
-      </div>
-      <div class="section">
-        <h2>10. Contact</h2>
-        <p>For any questions regarding these terms, please contact us at the following address: info@applidia.app</p>
       </div>
     </div>
 
-    <!-- Contenu Allemand -->
-    <div id="de" class="lang-content">
-      <h1>Allgemeine Nutzungsbedingungen – Applidia</h1>
-      <p><em>Letzte Aktualisierung: 26.05.2025</em></p>
-      <div class="section">
-        <h2>1. Vorstellung der Anwendung</h2>
-        <p>Willkommen in der Anwendung. Applidia ist eine mobile Anwendung, die von Appplidia Sàrl entwickelt wurde. Die Anwendung ermöglicht es den Nutzern, ihren Diabetes zu überwachen und Gesundheitsdaten (Blutzucker, Insulin usw.) aufzuzeichnen.</p>
+    <!-- ================================================== -->
+    <!--       SECTION 3: Politique de confidentialité        -->
+    <!-- ================================================== -->
+    <div id="confidentialite" class="page-section">
+      <div class="content-wrapper">
+      <!-- Contenu Français -->
+      <div class="lang-content lang-fr active">
+        <h1>Politique de confidentialité de l’application Applidia</h1>
+        <p><em>Dernière mise à jour : 12.06.2025</em></p>
+        <div class="section">
+          <h2>1. Introduction</h2>
+          <p>La présente politique de confidentialité explique comment Applidia, application éditée par Applidia Sàrl, collecte, utilise, conserve et protège vos données personnelles, y compris les données de santé, dans le cadre de votre utilisation de l’application.</p>
+          <p>Nous nous engageons à respecter votre vie privée conformément :</p>
+          <ul>
+            <li>au Règlement général sur la protection des données (UE) 2016/679 – RGPD,</li>
+            <li>à la Loi fédérale sur la protection des données (LPD) en Suisse.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>2. Responsable du traitement</h2>
+          <p>
+            <strong>Nom :</strong> Applidia Sàrl<br>
+            <strong>Adresse :</strong> [adresse postale]<br>
+            <strong>Numéro IDE :</strong> [numéro IDE]<br>
+            <strong>Contact :</strong> info@applidia.app<br>
+            <strong>Siège juridique :</strong> Lausanne, Suisse
+          </p>
+        </div>
+        <div class="section">
+          <h2>3. Données collectées</h2>
+          <p>Lorsque vous utilisez l’application Applidia, nous pouvons collecter les types de données suivants :</p>
+          <h3>Données personnelles</h3>
+          <ul>
+            <li>Nom, prénom (facultatif)</li>
+            <li>Date de naissance</li>
+            <li>Adresse e-mail</li>
+            <li>Identifiant de compte</li>
+          </ul>
+          <h3>Données de santé</h3>
+          <ul>
+            <li>Valeurs de glycémie</li>
+            <li>Activité physique</li>
+            <li>Traitements médicamenteux</li>
+            <li>Poids, tension artérielle</li>
+            <li>Notes personnelles</li>
+          </ul>
+          <h3>Données techniques</h3>
+          <ul>
+            <li>Type de smartphone</li>
+            <li>Système d’exploitation</li>
+            <li>Statistiques d’utilisation de l’application</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Finalités du traitement</h2>
+          <p>Vos données sont utilisées exclusivement pour :</p>
+          <ul>
+            <li>Le suivi personnel de votre santé en rapport avec le diabète</li>
+            <li>La génération de graphiques ou rapports</li>
+            <li>L’amélioration de l’application (données anonymisées)</li>
+            <li>Vous informer en cas de mise à jour ou de changement important (ex. CGU)</li>
+          </ul>
+          <p>Nous ne vendons ni ne partageons vos données à des tiers sans votre consentement explicite.</p>
+        </div>
+        <div class="section">
+          <h2>5. Base légale du traitement</h2>
+          <p>Le traitement de vos données est fondé sur :</p>
+          <ul>
+            <li>Votre consentement explicite, notamment pour les données de santé</li>
+            <li>L’intérêt légitime pour assurer le bon fonctionnement de l’application</li>
+            <li>L’exécution du contrat (CGU) lorsque vous utilisez l’application</li>
+            <li>L’exécution d’un service demandé par l’utilisateur</li>
+          </ul>
+          <p>Vous pouvez retirer votre consentement à tout moment via les paramètres de l’application ou en nous contactant.</p>
+        </div>
+        <div class="section">
+          <h2>6. Stockage et sécurité</h2>
+          <p>Vos données sont :</p>
+          <ul>
+            <li>Stockées sur des serveurs sécurisés localisés en Suisse</li>
+            <li>Protégées par des mesures techniques et organisationnelles (chiffrement, accès restreint, journalisation)</li>
+          </ul>
+          <p>Les mesures suivantes sont mises en place :</p>
+          <ul>
+            <li>Données chiffrées en transit et au repos (TLS, AES)</li>
+            <li>Authentification sécurisée</li>
+            <li>Sauvegardes régulières</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>7. Durée de conservation</h2>
+          <p>Vos données sont conservées tant que vous utilisez l’application. Vous pouvez les supprimer à tout moment via votre compte ou en nous contactant.</p>
+          <p>En cas d’inactivité prolongée (plus de 24 mois), votre compte pourra être anonymisé ou supprimé après notification.</p>
+        </div>
+        <div class="section">
+          <h2>8. Droits des utilisateurs</h2>
+          <p>Conformément au RGPD et à la LPD, vous disposez des droits suivants :</p>
+          <ul>
+            <li>Droit d’accès à vos données</li>
+            <li>Droit de rectification</li>
+            <li>Droit à l’effacement (« droit à l’oubli »)</li>
+            <li>Droit à la limitation du traitement</li>
+            <li>Droit à la portabilité</li>
+            <li>Droit d’opposition (dans certains cas)</li>
+            <li>Droit de retirer votre consentement à tout moment</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>9. Partage de données</h2>
+          <p>Vos données ne sont jamais partagées avec des tiers sans votre consentement, sauf :</p>
+          <ul>
+            <li>Si requis par une obligation légale ou judiciaire</li>
+            <li>Prestataires techniques (hébergeur, support) agissant sous notre responsabilité et avec des garanties appropriées</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>10. Sécurité</h2>
+          <p>Nous mettons en œuvre des mesures techniques et organisationnelles pour garantir la sécurité et la confidentialité de vos données, notamment :</p>
+          <ul>
+            <li>Chiffrement des données</li>
+            <li>Accès restreint aux données</li>
+            <li>Journalisation des accès et actions critiques</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>11. Transfert international</h2>
+          <p>Nous ne transférons pas vos données hors de la Suisse ou de l’Espace Economique Européen (EEE), sauf si des garanties appropriées sont mises en place.</p>
+        </div>
+        <div class="section">
+          <h2>12. Modification de la politique</h2>
+          <p>Nous nous réservons le droit de modifier cette politique de confidentialité. Les utilisateurs seront notifiés des changements importants via l’application ou par email.</p>
+        </div>
+        <div class="section">
+          <h2>13. Contact</h2>
+          <p>Pour toute question ou réclamation concernant la confidentialité des données, vous pouvez nous contacter à :<br>Email : info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>2. Annahme der ANB</h2>
-        <p>Die Nutzung der Anwendung setzt die vollständige Annahme dieser Allgemeinen Nutzungsbedingungen voraus. Wenn der Nutzer die ANB ganz oder teilweise nicht akzeptiert, muss er von der Nutzung der Anwendung absehen. Diese Bedingungen können jederzeit geändert werden. Es liegt in Ihrer Verantwortung, diese Seite regelmäßig zu konsultieren, um sich über Änderungen zu informieren.</p>
+      <!-- Contenu Anglais -->
+      <div class="lang-content lang-en">
+        <h1>Applidia Application Privacy Policy</h1>
+        <p><em>Last updated: 12.06.2025</em></p>
+        <div class="section">
+          <h2>1. Introduction</h2>
+          <p>This privacy policy explains how Applidia, an application published by Applidia Sàrl, collects, uses, stores, and protects your personal data, including health data, in connection with your use of the application.</p>
+          <p>We are committed to respecting your privacy in accordance with:</p>
+          <ul>
+            <li>the General Data Protection Regulation (EU) 2016/679 – GDPR,</li>
+            <li>the Federal Act on Data Protection (FADP) in Switzerland.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>2. Data Controller</h2>
+          <p>
+            <strong>Name:</strong> Applidia Sàrl<br>
+            <strong>Address:</strong> [postal address]<br>
+            <strong>IDE Number:</strong> [IDE number]<br>
+            <strong>Contact:</strong> info@applidia.app<br>
+            <strong>Legal Domicile:</strong> Lausanne, Switzerland
+          </p>
+        </div>
+        <div class="section">
+          <h2>3. Data Collected</h2>
+          <p>When you use the Applidia application, we may collect the following types of data:</p>
+          <h3>Personal Data</h3>
+          <ul>
+            <li>First name, last name (optional)</li>
+            <li>Date of birth</li>
+            <li>Email address</li>
+            <li>Account identifier</li>
+          </ul>
+          <h3>Health Data</h3>
+          <ul>
+            <li>Blood glucose values</li>
+            <li>Physical activity</li>
+            <li>Medication treatments</li>
+            <li>Weight, blood pressure</li>
+            <li>Personal notes</li>
+          </ul>
+          <h3>Technical Data</h3>
+          <ul>
+            <li>Smartphone type</li>
+            <li>Operating system</li>
+            <li>Application usage statistics</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Purposes of Processing</h2>
+          <p>Your data is used exclusively for:</p>
+          <ul>
+            <li>Personal monitoring of your health related to diabetes</li>
+            <li>Generating charts or reports</li>
+            <li>Improving the application (anonymized data)</li>
+            <li>Informing you of important updates or changes (e.g., ToS)</li>
+          </ul>
+          <p>We do not sell or share your data with third parties without your explicit consent.</p>
+        </div>
+        <div class="section">
+          <h2>5. Legal Basis for Processing</h2>
+          <p>The processing of your data is based on:</p>
+          <ul>
+            <li>Your explicit consent, especially for health data</li>
+            <li>Legitimate interest to ensure the proper functioning of the application</li>
+            <li>The performance of the contract (ToS) when you use the application</li>
+            <li>The execution of a service requested by the user</li>
+          </ul>
+          <p>You can withdraw your consent at any time via the application settings or by contacting us.</p>
+        </div>
+        <div class="section">
+          <h2>6. Storage and Security</h2>
+          <p>Your data is:</p>
+          <ul>
+            <li>Stored on secure servers located in Switzerland</li>
+            <li>Protected by technical and organizational measures (encryption, restricted access, logging)</li>
+          </ul>
+          <p>The following measures are in place:</p>
+          <ul>
+            <li>Data encrypted in transit and at rest (TLS, AES)</li>
+            <li>Secure authentication</li>
+            <li>Regular backups</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>7. Retention Period</h2>
+          <p>Your data is retained as long as you use the application. You can delete it at any time via your account or by contacting us.</p>
+          <p>In case of prolonged inactivity (more than 24 months), your account may be anonymized or deleted after notification.</p>
+        </div>
+        <div class="section">
+          <h2>8. User Rights</h2>
+          <p>In accordance with the GDPR and FADP, you have the following rights:</p>
+          <ul>
+            <li>Right of access to your data</li>
+            <li>Right to rectification</li>
+            <li>Right to erasure ("right to be forgotten")</li>
+            <li>Right to restriction of processing</li>
+            <li>Right to data portability</li>
+            <li>Right to object (in certain cases)</li>
+            <li>Right to withdraw consent at any time</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>9. Data Sharing</h2>
+          <p>Your data is never shared with third parties without your consent, except:</p>
+          <ul>
+            <li>If required by a legal or judicial obligation</li>
+            <li>Technical service providers (hosting, support) acting under our responsibility and with appropriate guarantees</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>10. Security</h2>
+          <p>We implement technical and organizational measures to ensure the security and confidentiality of your data, including:</p>
+          <ul>
+            <li>Data encryption</li>
+            <li>Restricted access to data</li>
+            <li>Logging of critical access and actions</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>11. International Transfer</h2>
+          <p>We do not transfer your data outside of Switzerland or the European Economic Area (EEA), unless appropriate safeguards are in place.</p>
+        </div>
+        <div class="section">
+          <h2>12. Policy Changes</h2>
+          <p>We reserve the right to modify this privacy policy. Users will be notified of significant changes via the application or by email.</p>
+        </div>
+        <div class="section">
+          <h2>13. Contact</h2>
+          <p>For any questions or complaints regarding data privacy, you can contact us at:<br>Email: info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>3. Nutzung der Anwendung</h2>
-        <p>Die Anwendung ist nur für den persönlichen Gebrauch bestimmt und ersetzt keinesfalls eine ärztliche Beratung. Im Falle eines medizinischen Notfalls sollten Sie einen Arzt konsultieren oder den Notdienst kontaktieren. Der Zugang zu Applidia ist kostenlos (ohne Verbindungskosten), aber einige erweiterte Funktionen können einem kostenpflichtigen Abonnement unterliegen. Der Nutzer muss mindestens 16 Jahre alt sein oder die Genehmigung eines Erziehungsberechtigten haben.</p>
+      <!-- Contenu Allemand -->
+      <div class="lang-content lang-de">
+        <h1>Datenschutzrichtlinie der Applidia-Anwendung</h1>
+        <p><em>Letzte Aktualisierung: 12.06.2025</em></p>
+        <div class="section">
+          <h2>1. Einleitung</h2>
+          <p>Diese Datenschutzrichtlinie erklärt, wie Applidia, eine von Applidia Sàrl herausgegebene Anwendung, Ihre personenbezogenen Daten, einschließlich Gesundheitsdaten, im Rahmen Ihrer Nutzung der Anwendung sammelt, verwendet, speichert und schützt.</p>
+          <p>Wir verpflichten uns, Ihre Privatsphäre zu respektieren gemäß:</p>
+          <ul>
+            <li>der Datenschutz-Grundverordnung (EU) 2016/679 – DSGVO,</li>
+            <li>dem Bundesgesetz über den Datenschutz (DSG) in der Schweiz.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>2. Verantwortlicher für die Datenverarbeitung</h2>
+          <p>
+            <strong>Name:</strong> Applidia Sàrl<br>
+            <strong>Adresse:</strong> [Postanschrift]<br>
+            <strong>IDE-Nummer:</strong> [IDE-Nummer]<br>
+            <strong>Kontakt:</strong> info@applidia.app<br>
+            <strong>Rechtssitz:</strong> Lausanne, Schweiz
+          </p>
+        </div>
+        <div class="section">
+          <h2>3. Erhobene Daten</h2>
+          <p>Wenn Sie die Applidia-Anwendung nutzen, können wir die folgenden Arten von Daten erheben:</p>
+          <h3>Personenbezogene Daten</h3>
+          <ul>
+            <li>Vorname, Nachname (optional)</li>
+            <li>Geburtsdatum</li>
+            <li>E-Mail-Adresse</li>
+            <li>Konto-Identifikator</li>
+          </ul>
+          <h3>Gesundheitsdaten</h3>
+          <ul>
+            <li>Blutzuckerwerte</li>
+            <li>Körperliche Aktivität</li>
+            <li>Medikamentöse Behandlungen</li>
+            <li>Gewicht, Blutdruck</li>
+            <li>Persönliche Notizen</li>
+          </ul>
+          <h3>Technische Daten</h3>
+          <ul>
+            <li>Smartphone-Typ</li>
+            <li>Betriebssystem</li>
+            <li>Nutzungsstatistiken der Anwendung</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Zwecke der Verarbeitung</h2>
+          <p>Ihre Daten werden ausschließlich verwendet für:</p>
+          <ul>
+            <li>Die persönliche Überwachung Ihrer Gesundheit im Zusammenhang mit Diabetes</li>
+            <li>Die Erstellung von Grafiken oder Berichten</li>
+            <li>Die Verbesserung der Anwendung (anonymisierte Daten)</li>
+            <li>Die Information über wichtige Updates oder Änderungen (z.B. AGB)</li>
+          </ul>
+          <p>Wir verkaufen oder teilen Ihre Daten nicht ohne Ihre ausdrückliche Zustimmung mit Dritten.</p>
+        </div>
+        <div class="section">
+          <h2>5. Rechtsgrundlage der Verarbeitung</h2>
+          <p>Die Verarbeitung Ihrer Daten basiert auf:</p>
+          <ul>
+            <li>Ihrer ausdrücklichen Einwilligung, insbesondere für Gesundheitsdaten</li>
+            <li>Dem berechtigten Interesse, den ordnungsgemäßen Betrieb der Anwendung sicherzustellen</li>
+            <li>Der Erfüllung des Vertrags (AGB), wenn Sie die Anwendung nutzen</li>
+            <li>Der Ausführung einer vom Benutzer angeforderten Dienstleistung</li>
+          </ul>
+          <p>Sie können Ihre Einwilligung jederzeit über die Anwendungseinstellungen oder durch Kontaktaufnahme mit uns widerrufen.</p>
+        </div>
+        <div class="section">
+          <h2>6. Speicherung und Sicherheit</h2>
+          <p>Ihre Daten werden:</p>
+          <ul>
+            <li>Auf sicheren Servern in der Schweiz gespeichert</li>
+            <li>Durch technische und organisatorische Maßnahmen geschützt (Verschlüsselung, eingeschränkter Zugriff, Protokollierung)</li>
+          </ul>
+          <p>Folgende Maßnahmen sind implementiert:</p>
+          <ul>
+            <li>Datenverschlüsselung während der Übertragung und im Ruhezustand (TLS, AES)</li>
+            <li>Sichere Authentifizierung</li>
+            <li>Regelmäßige Sicherungen</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>7. Aufbewahrungsdauer</h2>
+          <p>Ihre Daten werden so lange aufbewahrt, wie Sie die Anwendung nutzen. Sie können sie jederzeit über Ihr Konto oder durch Kontaktaufnahme mit uns löschen.</p>
+          <p>Bei längerer Inaktivität (mehr als 24 Monate) kann Ihr Konto nach Benachrichtigung anonymisiert oder gelöscht werden.</p>
+        </div>
+        <div class="section">
+          <h2>8. Rechte der Nutzer</h2>
+          <p>Gemäß DSGVO und DSG haben Sie folgende Rechte:</p>
+          <ul>
+            <li>Recht auf Zugang zu Ihren Daten</li>
+            <li>Recht auf Berichtigung</li>
+            <li>Recht auf Löschung („Recht auf Vergessenwerden“)</li>
+            <li>Recht auf Einschränkung der Verarbeitung</li>
+            <li>Recht auf Datenübertragbarkeit</li>
+            <li>Widerspruchsrecht (in bestimmten Fällen)</li>
+            <li>Recht, die Einwilligung jederzeit zu widerrufen</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>9. Datenweitergabe</h2>
+          <p>Ihre Daten werden niemals ohne Ihre Zustimmung an Dritte weitergegeben, außer:</p>
+          <ul>
+            <li>Wenn dies aufgrund einer gesetzlichen oder gerichtlichen Verpflichtung erforderlich ist</li>
+            <li>An technische Dienstleister (Hosting, Support), die unter unserer Verantwortung und mit angemessenen Garantien handeln</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>10. Sicherheit</h2>
+          <p>Wir setzen technische und organisatorische Maßnahmen um, um die Sicherheit und Vertraulichkeit Ihrer Daten zu gewährleisten, insbesondere:</p>
+          <ul>
+            <li>Datenverschlüsselung</li>
+            <li>Eingeschränkter Zugriff auf Daten</li>
+            <li>Protokollierung kritischer Zugriffe und Aktionen</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>11. Internationale Übermittlung</h2>
+          <p>Wir übermitteln Ihre Daten nicht außerhalb der Schweiz oder des Europäischen Wirtschaftsraums (EWR), es sei denn, es sind angemessene Garantien vorhanden.</p>
+        </div>
+        <div class="section">
+          <h2>12. Änderung der Richtlinie</h2>
+          <p>Wir behalten uns das Recht vor, diese Datenschutzrichtlinie zu ändern. Die Nutzer werden über wesentliche Änderungen per In-App-Benachrichtigung oder E-Mail informiert.</p>
+        </div>
+        <div class="section">
+          <h2>13. Kontakt</h2>
+          <p>Bei Fragen oder Beschwerden zum Datenschutz können Sie uns kontaktieren unter:<br>E-Mail: info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>4. Erstellung eines Kontos</h2>
-        <p>Der Nutzer muss ein persönliches Konto erstellen und genaue Informationen angeben. Er verpflichtet sich, die Vertraulichkeit seiner Anmeldedaten zu wahren und ist für jede Nutzung seines Kontos verantwortlich.</p>
+      <!-- Contenu Italien -->
+      <div class="lang-content lang-it">
+        <h1>Informativa sulla privacy dell'applicazione Applidia</h1>
+        <p><em>Ultimo aggiornamento: 12.06.2025</em></p>
+        <div class="section">
+          <h2>1. Introduzione</h2>
+          <p>La presente informativa sulla privacy spiega come Applidia, un'applicazione pubblicata da Applidia Sàrl, raccoglie, utilizza, conserva e protegge i tuoi dati personali, inclusi i dati sanitari, nell'ambito del tuo utilizzo dell'applicazione.</p>
+          <p>Ci impegniamo a rispettare la tua privacy in conformità con:</p>
+          <ul>
+            <li>il Regolamento generale sulla protezione dei dati (UE) 2016/679 – GDPR,</li>
+            <li>la Legge federale sulla protezione dei dati (LPD) in Svizzera.</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>2. Titolare del trattamento</h2>
+          <p>
+            <strong>Nome:</strong> Applidia Sàrl<br>
+            <strong>Indirizzo:</strong> [indirizzo postale]<br>
+            <strong>Numero IDE:</strong> [numero IDE]<br>
+            <strong>Contatto:</strong> info@applidia.app<br>
+            <strong>Sede legale:</strong> Losanna, Svizzera
+          </p>
+        </div>
+        <div class="section">
+          <h2>3. Dati raccolti</h2>
+          <p>Quando utilizzi l'applicazione Applidia, possiamo raccogliere i seguenti tipi di dati:</p>
+          <h3>Dati personali</h3>
+          <ul>
+            <li>Nome, cognome (facoltativo)</li>
+            <li>Data di nascita</li>
+            <li>Indirizzo e-mail</li>
+            <li>Identificatore dell'account</li>
+          </ul>
+          <h3>Dati sanitari</h3>
+          <ul>
+            <li>Valori della glicemia</li>
+            <li>Attività fisica</li>
+            <li>Trattamenti farmacologici</li>
+            <li>Peso, pressione sanguigna</li>
+            <li>Note personali</li>
+          </ul>
+          <h3>Dati tecnici</h3>
+          <ul>
+            <li>Tipo di smartphone</li>
+            <li>Sistema operativo</li>
+            <li>Statistiche di utilizzo dell'applicazione</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>4. Finalità del trattamento</h2>
+          <p>I tuoi dati sono utilizzati esclusivamente per:</p>
+          <ul>
+            <li>Il monitoraggio personale della tua salute in relazione al diabete</li>
+            <li>La generazione di grafici o report</li>
+            <li>Il miglioramento dell'applicazione (dati anonimizzati)</li>
+            <li>Informarti in caso di aggiornamenti o modifiche importanti (es. TdS)</li>
+          </ul>
+          <p>Non vendiamo né condividiamo i tuoi dati con terze parti senza il tuo esplicito consenso.</p>
+        </div>
+        <div class="section">
+          <h2>5. Base giuridica del trattamento</h2>
+          <p>Il trattamento dei tuoi dati si basa su:</p>
+          <ul>
+            <li>Il tuo consenso esplicito, in particolare per i dati sanitari</li>
+            <li>L'interesse legittimo a garantire il corretto funzionamento dell'applicazione</li>
+            <li>L'esecuzione del contratto (TdS) quando utilizzi l'applicazione</li>
+            <li>L'esecuzione di un servizio richiesto dall'utente</li>
+          </ul>
+          <p>Puoi revocare il tuo consenso in qualsiasi momento tramite le impostazioni dell'applicazione o contattandoci.</p>
+        </div>
+        <div class="section">
+          <h2>6. Conservazione e sicurezza</h2>
+          <p>I tuoi dati sono:</p>
+          <ul>
+            <li>Conservati su server sicuri situati in Svizzera</li>
+            <li>Protetti da misure tecniche e organizzative (crittografia, accesso limitato, registrazione)</li>
+          </ul>
+          <p>Sono in atto le seguenti misure:</p>
+          <ul>
+            <li>Dati crittografati in transito e a riposo (TLS, AES)</li>
+            <li>Autenticazione sicura</li>
+            <li>Backup regolari</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>7. Periodo di conservazione</h2>
+          <p>I tuoi dati vengono conservati finché utilizzi l'applicazione. Puoi cancellarli in qualsiasi momento tramite il tuo account o contattandoci.</p>
+          <p>In caso di inattività prolungata (più di 24 mesi), il tuo account potrà essere anonimizzato o cancellato previa notifica.</p>
+        </div>
+        <div class="section">
+          <h2>8. Diritti degli utenti</h2>
+          <p>In conformità con il GDPR e la LPD, hai i seguenti diritti:</p>
+          <ul>
+            <li>Diritto di accesso ai tuoi dati</li>
+            <li>Diritto di rettifica</li>
+            <li>Diritto alla cancellazione ("diritto all'oblio")</li>
+            <li>Diritto di limitazione del trattamento</li>
+            <li>Diritto alla portabilità dei dati</li>
+            <li>Diritto di opposizione (in alcuni casi)</li>
+            <li>Diritto di revocare il consenso in qualsiasi momento</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>9. Condivisione dei dati</h2>
+          <p>I tuoi dati non vengono mai condivisi con terze parti senza il tuo consenso, salvo:</p>
+          <ul>
+            <li>Se richiesto da un obbligo legale o giudiziario</li>
+            <li>Fornitori di servizi tecnici (hosting, supporto) che agiscono sotto la nostra responsabilità e con garanzie appropriate</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>10. Sicurezza</h2>
+          <p>Implementiamo misure tecniche e organizzative per garantire la sicurezza e la riservatezza dei tuoi dati, tra cui:</p>
+          <ul>
+            <li>Crittografia dei dati</li>
+            <li>Accesso limitato ai dati</li>
+            <li>Registrazione degli accessi e delle azioni critiche</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>11. Trasferimento internazionale</h2>
+          <p>Non trasferiamo i tuoi dati al di fuori della Svizzera o dello Spazio Economico Europeo (SEE), a meno che non siano in atto garanzie adeguate.</p>
+        </div>
+        <div class="section">
+          <h2>12. Modifiche all'informativa</h2>
+          <p>Ci riserviamo il diritto di modificare la presente informativa sulla privacy. Gli utenti saranno informati delle modifiche significative tramite l'applicazione o via e-mail.</p>
+        </div>
+        <div class="section">
+          <h2>13. Contatti</h2>
+          <p>Per qualsiasi domanda o reclamo riguardante la privacy dei dati, puoi contattarci a:<br>Email : info@applidia.app</p>
+        </div>
       </div>
-      <div class="section">
-        <h2>5. Persönliche Daten</h2>
-        <p>Applidia verarbeitet persönliche Gesundheitsdaten gemäß dem Schweizer Bundesgesetz über den Datenschutz (DSG) und gegebenenfalls der Datenschutz-Grundverordnung (DSGVO). Die Daten werden sicher und verschlüsselt gespeichert und ohne ausdrückliche Zustimmung nicht an Dritte weitergegeben, es sei denn, es besteht eine gesetzliche Verpflichtung.</p>
-        <p>Rechte des Nutzers:</p>
-        <ul>
-          <li>Zugang zu seinen Daten</li>
-          <li>Berichtigung und Löschung</li>
-          <li>Widerruf der Einwilligung</li>
-        </ul>
-      </div>
-      <div class="section">
-        <h2>6. Haftung</h2>
-        <p>Sie sind für die Nutzung der Anwendung und die von Ihnen eingegebenen Informationen verantwortlich. Applidia Sàrl kann nicht für die Folgen einer unsachgemäßen Nutzung der Anwendung haftbar gemacht werden. Applidia Sàrl bemüht sich, einen zuverlässigen Dienst bereitzustellen, garantiert jedoch nicht die Genauigkeit oder ständige Verfügbarkeit der Dienste. Applidia Sàrl haftet nicht für direkte oder indirekte Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung der Anwendung entstehen.</p>
-      </div>
-      <div class="section">
-        <h2>7. Geistiges Eigentum</h2>
-        <p>Alle Inhalte der Anwendung (Texte, Logos, Schnittstellen, Algorithmen usw.) sind durch Gesetze zum Schutz des geistigen Eigentums geschützt und sind das ausschließliche Eigentum von Applidia Sàrl oder seinen Partnern. Sie dürfen ohne vorherige Genehmigung keine abgeleiteten Werke reproduzieren, verteilen oder erstellen.</p>
-      </div>
-      <div class="section">
-        <h2>8. Änderung der ANB</h2>
-        <p>Appllidia Sàrl behält sich das Recht vor, diese ANB jederzeit zu ändern. Die Nutzer werden über Änderungen durch eine Benachrichtigung in der Anwendung informiert. Die fortgesetzte Nutzung der Anwendung nach einer Änderung gilt als Annahme der neuen ANB.</p>
-      </div>
-      <div class="section">
-        <h2>9. Anwendbares Recht und Gerichtsstand</h2>
-        <p>Diese allgemeinen Bedingungen unterliegen dem Schweizer Recht. Alle Streitigkeiten im Zusammenhang mit der Anwendung oder diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte des Bezirks Lausanne, Schweiz. Die französische Version der ANB ist maßgebend.</p>
-      </div>
-      <div class="section">
-        <h2>10. Kontakt</h2>
-        <p>Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte unter folgender Adresse: info@applidia.app</p>
       </div>
     </div>
 
-    <!-- Contenu Italien -->
-    <div id="it" class="lang-content">
-      <h1>Termini e Condizioni d'Uso – Applidia</h1>
-      <p><em>Ultimo aggiornamento: 26.05.2025</em></p>
-      <div class="section">
-        <h2>1. Presentazione dell'applicazione</h2>
-        <p>Benvenuti nell'applicazione. Applidia è un'applicazione mobile sviluppata da Appplidia Sàrl. L'applicazione consente agli utenti di monitorare il proprio diabete e registrare dati sanitari (glicemie, insuline, ecc.).</p>
-      </div>
-      <div class="section">
-        <h2>2. Accettazione dei Termini</h2>
-        <p>L'uso dell'applicazione implica l'accettazione piena e completa di questi Termini e Condizioni d'Uso. Se l'utente non accetta tutti o parte dei Termini, deve astenersi dall'utilizzare l'applicazione. Queste condizioni possono essere modificate in qualsiasi momento. È responsabilità dell'utente consultare regolarmente questa pagina per essere a conoscenza delle modifiche.</p>
-      </div>
-      <div class="section">
-        <h2>3. Uso dell'applicazione</h2>
-        <p>L'applicazione è riservata a un uso personale e non sostituisce in alcun caso un parere medico. In caso di emergenza medica, è necessario consultare un medico o contattare i servizi di emergenza. L'accesso ad Applidia è gratuito (esclusi i costi di connessione), ma alcune funzionalità avanzate possono essere soggette a un abbonamento a pagamento. L'utente deve avere almeno 16 anni o disporre dell'autorizzazione di un tutore legale.</p>
-      </div>
-      <div class="section">
-        <h2>4. Creazione di un account</h2>
-        <p>L'utente deve creare un account personale e fornire informazioni accurate. Si impegna a mantenere la riservatezza delle proprie credenziali di accesso ed è responsabile di qualsiasi uso del proprio account.</p>
-      </div>
-      <div class="section">
-        <h2>5. Dati personali</h2>
-        <p>Applidia tratta i dati sanitari personali in conformità con la Legge federale svizzera sulla protezione dei dati (LPD) e, se del caso, con il Regolamento generale sulla protezione dei dati (GDPR). I dati sono conservati in modo sicuro, crittografati e non vengono trasmessi a terzi senza un consenso esplicito, salvo obbligo di legge.</p>
-        <p>Diritti dell'utente:</p>
-        <ul>
-          <li>Accesso ai propri dati</li>
-          <li>Rettifica e cancellazione</li>
-          <li>Revoca del consenso</li>
-        </ul>
-      </div>
-      <div class="section">
-        <h2>6. Responsabilità</h2>
-        <p>L'utente è responsabile dell'uso dell'applicazione e delle informazioni che vi inserisce. Applidia Sàrl non può essere ritenuta responsabile delle conseguenze di un uso improprio dell'applicazione. Applidia Sàrl si impegna a fornire un servizio affidabile, ma non garantisce l'accuratezza o la disponibilità permanente dei servizi. Applidia Sàrl non sarà responsabile per danni diretti o indiretti derivanti dall'uso o dall'impossibilità di utilizzare l'applicazione.</p>
-      </div>
-      <div class="section">
-        <h2>7. Proprietà intellettuale</h2>
-        <p>Tutti i contenuti dell'applicazione (testi, loghi, interfacce, algoritmi, ecc.) sono protetti dalle leggi sulla proprietà intellettuale e sono di proprietà esclusiva di Applidia Sàrl o dei suoi partner. Non è possibile riprodurre, distribuire o creare opere derivate senza previa autorizzazione.</p>
-      </div>
-      <div class="section">
-        <h2>8. Modifica dei Termini</h2>
-        <p>Appllidia Sàrl si riserva il diritto di modificare i presenti Termini in qualsiasi momento. Gli utenti saranno informati delle modifiche tramite una notifica all'interno dell'applicazione. L'uso continuato dell'applicazione dopo la modifica costituisce accettazione dei nuovi Termini.</p>
-      </div>
-      <div class="section">
-        <h2>9. Legge applicabile e foro competente</h2>
-        <p>Le presenti condizioni generali sono soggette al diritto svizzero. Qualsiasi controversia relativa all'applicazione o alle presenti condizioni sarà soggetta alla giurisdizione esclusiva dei tribunali del distretto di Losanna, Svizzera. La versione francese dei Termini è quella che fa fede.</p>
-      </div>
-      <div class="section">
-        <h2>10. Contatti</h2>
-        <p>Per qualsiasi domanda riguardante questi termini, vi preghiamo di contattarci al seguente indirizzo: info@applidia.app</p>
-      </div>
-    </div>
   </div>
 
   <footer>
     &copy; 2025 Applidia Sàrl. Tous droits réservés.
   </footer>
+  </footer>
 
   <script>
+    // Hide all sections by default, show the active one
+    document.querySelectorAll('.page-section').forEach(function(section) {
+      section.style.display = 'none';
+    });
+    document.querySelector('.page-section.active').style.display = 'block';
+
+    function switchPage(pageId, event) {
+      event.preventDefault();
+
+      // Hide all page sections
+      document.querySelectorAll('.page-section').forEach(function(section) {
+        section.style.display = 'none';
+        section.classList.remove('active');
+      });
+
+      // Show the selected page section
+      const activePage = document.getElementById(pageId);
+      if (activePage) {
+        activePage.style.display = 'block';
+        activePage.classList.add('active');
+      }
+
+      // Update active state for nav links
+      document.querySelectorAll('.page-nav a').forEach(function(link) {
+        link.classList.remove('active');
+      });
+      document.querySelectorAll('.page-nav a[href="#' + pageId + '"]').forEach(function(link) {
+        link.classList.add('active');
+      });
+    }
+
     function switchLang(lang) {
       // Hide all language contents
       document.querySelectorAll('.lang-content').forEach(function(el) {
@@ -304,13 +1470,21 @@
         el.classList.remove('active');
       });
 
-      // Show selected language content
-      document.getElementById(lang).classList.add('active');
+      // Show selected language content for all sections
+      document.querySelectorAll('.lang-' + lang).forEach(function(el) {
+        el.classList.add('active');
+      });
       // Activate selected button
       document.getElementById('btn-' + lang).classList.add('active');
       
       // Update page language attribute
       document.documentElement.lang = lang;
+
+      // Update navs
+      document.querySelectorAll('.page-nav-wrapper').forEach(function(wrapper) {
+        wrapper.querySelector('.lang-content.active')?.classList.remove('active');
+        wrapper.querySelector('.lang-' + lang)?.classList.add('active');
+      });
     }
   </script>
 </body>
